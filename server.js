@@ -25,7 +25,7 @@ app.use((err, req, res, next) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "methods-public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", indexRouter);

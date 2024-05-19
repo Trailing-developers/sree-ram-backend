@@ -8,6 +8,7 @@
     "dev": "nodemon server.js",
     "build": "webpack",
     "prod": "node dist/final.js",
+    "build:css": "npx tailwindcss -i ./public/tailwind.css -o ./public/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +21,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.19",
     "nodemon": "^3.1.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
   }
