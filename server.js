@@ -5,6 +5,7 @@ const path = require("path");
 
 const indexRouter = require("./routes/index");
 const kathaRouter = require("./routes/katha_api");
+const mantraRouter = require("./routes/mantras");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", indexRouter);
-app.use("/api", kathaRouter);
+app.use("/api", [kathaRouter, mantraRouter]);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
