@@ -1,16 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json({ message: "Hello from the API!" });
-});
+const { updateSuccess } = require("../controllers/admin");
 
-router.get("/users", (req, res) => {
-  const users = [
-    { id: 1, name: "Alice" },
-    { id: 2, name: "Bob" },
-  ];
-  res.json(users);
-});
+router.post("/submit", updateSuccess);
 
 module.exports = router;
