@@ -1,4 +1,4 @@
-const { getAllMantras } = require("../repository/mantra");
+const { getAllMantras, addMantra } = require("../repository/mantra");
 
 const getMantras = (req, res) => {
   getAllMantras()
@@ -10,6 +10,15 @@ const getMantras = (req, res) => {
     });
 };
 
+const createMantra = (req, res) => {
+  const { title, content, image } = req.body;
+  const lines = content.split(",");
+  console.log(lines);
+  const response = addMantra({ title, lines, image });
+  res.json({ message: "Mantra created successfully." });
+};
+
 module.exports = {
   getMantras,
+  createMantra,
 };

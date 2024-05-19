@@ -5,6 +5,19 @@ const getAllMantras = async () => {
   return mantras;
 };
 
+const addMantra = async (body) => {
+  const { title, lines, image } = body;
+  const mantra = await prisma.mantra.create({
+    data: {
+      title: title,
+      content: lines,
+      image: image,
+    },
+  });
+  return mantra;
+};
+
 module.exports = {
   getAllMantras,
+  addMantra,
 };

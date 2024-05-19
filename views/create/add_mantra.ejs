@@ -1,0 +1,46 @@
+<h2 class="text-xl font-semibold mb-2">Add Mantra</h2>
+<form action="/api/mantra" method="POST" class="space-y-4">
+    <div>
+      <label for="title" class="block text-sm font-medium text-gray-700"
+        >Title:</label
+      >
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+    </div>
+    <div>
+      <label for="image" class="block text-sm font-medium text-gray-700"
+        >Image Link:</label
+      >
+      <input
+        type="text"
+        id="image"
+        name="image"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+    </div>
+    <div>
+      <label for="content" class="block text-sm font-medium text-gray-700"
+        >Content:</label
+      >
+      <input
+        type="content"
+        id="content"
+        name="content"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+    </div>
+    <button
+      type="submit"
+      class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >
+      Submit
+    </button>
+  </form>
+</form>
