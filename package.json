@@ -9,7 +9,6 @@
     "build": "webpack",
     "prod": "node dist/final.js",
     "build:css": "npx tailwindcss -i ./public/tailwind.css -o ./public/output.css --watch",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "postinstall": "prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
