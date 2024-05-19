@@ -1,5 +1,6 @@
 const updateSuccess = (req, res) => {
-  res.render("success", { name: "Great!" });
+  const { name, email } = req.body;
+  res.render("success", { name: name });
 };
 
 module.exports = {
