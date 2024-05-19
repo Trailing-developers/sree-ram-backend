@@ -38,6 +38,15 @@ module.exports.KATHA_LIST = [
       "https://m.media-amazon.com/images/I/91y46ttZCwL._AC_UF894,1000_QL80_.jpg",
     pdfLink: "https://vedpuran.net/wp-content/uploads/2011/10/shiv-puran.pdf",
   },
+  {
+    id: 5,
+    title: "Shiva Purana with Shiva on cover",
+    description:
+      "The Shiva Purana is one of the major Puranas, a genre of ancient Hindu texts. It is devoted to the Hindu deity Shiva.",
+    image:
+      "https://m.media-amazon.com/images/I/91y46ttZCwL._AC_UF894,1000_QL80_.jpg",
+    pdfLink: "https://vedpuran.net/wp-content/uploads/2011/10/shiv-puran.pdf",
+  },
 ];
 
 module.exports.SONG_LIST = [
