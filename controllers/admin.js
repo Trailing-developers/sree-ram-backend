@@ -4,7 +4,7 @@ const updateSuccess = (req, res) => {
 };
 
 const createOption = (req, res) => {
-  const types = ["katha", "mantra"];
+  const types = ["katha", "mantra", "banners"];
   res.render("create", { types });
 };
 
