@@ -1,10 +1,25 @@
-const { addBannersWidget, getHomeWidgets } = require("../repository/widget");
+const {
+  addBannersWidget,
+  getHomeWidgets,
+  getDarshanBanners,
+} = require("../repository/widget");
 
 const getHome = (req, res) => {
   const response = getHomeWidgets();
   response
     .then((homeWidgets) => {
       res.json({ status: "success", data: homeWidgets });
+    })
+    .catch((err) => {
+      res.status(500).json({ status: "error", message: err.message });
+    });
+};
+
+const getDarshan = (req, res) => {
+  const response = getDarshanBanners();
+  response
+    .then((darshanWidget) => {
+      res.json({ status: "success", data: darshanWidget });
     })
     .catch((err) => {
       res.status(500).json({ status: "error", message: err.message });
@@ -40,6 +55,22 @@ const createCalanderBanner = (req, res) => {
     });
 };
 
+const createDarshanBanner = (req, res) => {
+  const items = req.body;
+  const bannerJsonBody = createBannerBody(items);
+  const response = addBannersWidget("DARSHAN", "BANNER", bannerJsonBody);
+  response
+    .then((data) => {
+      res.json({
+        status: "success",
+        message: "DARSHAN_BANNER created successfully.",
+      });
+    })
+    .catch((err) => {
+      res.status(500).json({ status: "error", message: err.message });
+    });
+};
+
 function createBannerBody(items) {
   bannerJsonBody = [];
 
@@ -66,5 +97,7 @@ function createBannerBody(items) {
 module.exports = {
   createHomeBanner,
   createCalanderBanner,
+  createDarshanBanner,
   getHome,
+  getDarshan,
 };

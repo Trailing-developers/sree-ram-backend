@@ -1,6 +1,7 @@
 const {
   getHomeBanners,
   getHomeCalendarBanners,
+  getDarshanBanners,
 } = require("../repository/widget");
 
 const updateSuccess = (req, res) => {
@@ -9,7 +10,13 @@ const updateSuccess = (req, res) => {
 };
 
 const createOption = (req, res) => {
-  const types = ["katha", "mantra", "banners", "home_calendar_banner"];
+  const types = [
+    "katha",
+    "mantra",
+    "banners",
+    "home_calendar_banner",
+    "darshan_banner",
+  ];
   res.render("create", { types });
 };
 
@@ -27,6 +34,15 @@ const default_banners = {
     body: null,
   },
 };
+const default_array_banner = {
+  data: [
+    {
+      title: null,
+      imgUrl: null,
+      body: null,
+    },
+  ],
+};
 async function getPageContent(type) {
   if (type === "banners") {
     const banners = await getHomeBanners();
@@ -35,6 +51,13 @@ async function getPageContent(type) {
     const banners = await getHomeCalendarBanners();
     if (!banners || banners == null) {
       return default_banners;
+    }
+    return banners;
+  } else if (type === "darshan_banner") {
+    const banners = await getDarshanBanners();
+    console.log(banners);
+    if (!banners || banners == null) {
+      return default_array_banner;
     }
     return banners;
   }

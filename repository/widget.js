@@ -29,6 +29,16 @@ const getHomeCalendarBanners = async () => {
   return widgets;
 };
 
+const getDarshanBanners = async () => {
+  const widgets = await prisma.widgets.findFirst({
+    where: {
+      position: "DARSHAN",
+      type: "BANNER",
+    },
+  });
+  return widgets;
+};
+
 const addBannersWidget = async (position, type, body) => {
   const response = await prisma.widgets.upsert({
     where: {
@@ -55,4 +65,5 @@ module.exports = {
   getHomeWidgets,
   getHomeBanners,
   getHomeCalendarBanners,
+  getDarshanBanners,
 };
