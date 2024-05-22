@@ -2,6 +2,7 @@ const {
   addBannersWidget,
   getHomeWidgets,
   getDarshanBanners,
+  getDarshanWidgets,
 } = require("../repository/widget");
 
 const getHome = (req, res) => {
@@ -16,7 +17,7 @@ const getHome = (req, res) => {
 };
 
 const getDarshan = (req, res) => {
-  const response = getDarshanBanners();
+  const response = getDarshanWidgets();
   response
     .then((darshanWidget) => {
       res.json({ status: "success", data: darshanWidget });
