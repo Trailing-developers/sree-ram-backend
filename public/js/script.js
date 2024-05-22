@@ -64,11 +64,18 @@ document.addEventListener("DOMContentLoaded", function () {
             required
           />
         </div>
+        <button type="button" class="delete-button bg-red-500 text-white px-2 py-1 rounded">Delete</button>
         </div>
         `;
 
         // Append the new input field to the container
         itemContainer.insertAdjacentHTML("beforeend", newItemInput);
+      });
+
+      itemContainer.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete-button")) {
+          e.target.parentElement.remove();
+        }
       });
     }
   }

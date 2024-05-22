@@ -1,6 +1,6 @@
-<h2 class="text-xl font-semibold mb-2">Add Home Banner</h2>
+<h2 class="text-xl font-semibold mb-2">Add Calendar Banner</h2>
 
-<form action="/api/home_banner" method="POST" class="space-y-4">
+<form action="/api/calendar_banner" method="POST" class="space-y-4">
       <div id="itemContainer" class="space-y-4">
         <% content.data.forEach(item => { %>
           <div class="flex items-center space-x-2">
@@ -43,11 +43,9 @@
               required
             />
           </div>
-          <button type="button" class="delete-button bg-red-500 text-white px-2 py-1 rounded">Delete</button>
           </div>
         <% }); %>
       </div>
-      <button type="button" id="addItemButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600">Add Item</button>
       <button
         type="submit"
         class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

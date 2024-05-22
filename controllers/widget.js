@@ -24,6 +24,22 @@ const createHomeBanner = (req, res) => {
     });
 };
 
+const createCalanderBanner = (req, res) => {
+  const items = req.body;
+  const bannerJsonBody = createBannerBody(items);
+  const response = addBannersWidget("HOME", "CALENDAR_BANNER", bannerJsonBody);
+  response
+    .then((data) => {
+      res.json({
+        status: "success",
+        message: "HOME_CALENDAR_BANNER created successfully.",
+      });
+    })
+    .catch((err) => {
+      res.status(500).json({ status: "error", message: err.message });
+    });
+};
+
 function createBannerBody(items) {
   bannerJsonBody = [];
 
@@ -49,5 +65,6 @@ function createBannerBody(items) {
 
 module.exports = {
   createHomeBanner,
+  createCalanderBanner,
   getHome,
 };
