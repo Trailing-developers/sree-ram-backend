@@ -1,0 +1,523 @@
+{
+  "pageProps": {
+    "mantras": [
+      {
+        "content": "<p>Om Aakashaay Cha Vidmahe Nabho Devaay Dheemahi Tanno Gaganam Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "aakash-gayatri-mantra",
+        "title": "Aakash Gayatri Mantra"
+      },
+      {
+        "content": "<p>Alasasya Kutah Vidya,<br/>Avidyasya Kutah Dhanam ।<br/>Adhanasya Kutah Mitram,<br/>Amitrasya Kutah Sukham ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "alasasya-kutah-vidya-mantra",
+        "title": "Alasasya Kutah Vidya Mantra"
+      },
+      {
+        "content": "<p>Atma Rama Ananda Ramana<br/>Atma Rama Aananda Ramana<br/>Acchutha Kesava Hari Narayana<br/>Acchutha Kesava Hari Narayana<br/>Bhava Bhaya Harana Vandita Charana<br/>Bhava Bhaya Harana Vandita Charana<br/>Raghukula Bhushana Raajeeva Lochana<br/>Raghukula Bhushana Raajeeva Lochana<br/><br/>Atma Rama Ananda Ramana<br/>Atma Rama Aananda Ramana<br/>Acchutha Kesava Hari Narayana<br/>Acchutha Kesava Hari Narayana<br/><br/>Aadhi Naaraayana Aananta Shayana<br/>Aadhi Naaraayana Aananta Shayana<br/>Sachidananda Sri Sathya Naaraayana<br/>Sachidananda Sri Sathya Naaraayana<br/><br/>Atma Rama Ananda Ramana<br/>Atma Rama Aananda Ramana<br/>Acchutha Kesava Hari Narayana<br/>Acchutha Kesava Hari Narayana</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "atma-rama-ananda-ramana-mantra",
+        "title": "Atma Rama Ananda Ramana Mantra"
+      },
+      {
+        "content": "<p>Om Bhootadipaay Vidmahe Mahadevay Dheemahi Tanno Shastha Prachodayat<br/><br/>Om Bhootadipaay Vidmahe Bhaw Putraya Dheemahi Tanno Shastha Prachodayat<br/><br/>Om Bhootadipaay Vidmahe Bhaw Nandanaay Dheemahi Tanno Shastha Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "ayyappa-gayatri-mantra",
+        "title": "Ayyappa Gayatri Mantra"
+      },
+      {
+        "content": "<p>Bhagyad Lakshmi Baaramma ।<br/>Nammamm Ni Saubhagyad Lakshmi Baaramma ॥<br/>Hejjey Mele Hejjeyanikkut<br/>Gejje Kalgal Dhvaniy Torut ।<br/>Sajjan Sadhu Poojey Velege<br/>Majjigeyolagin Benneyante ॥<br/><br/><em>Bhagyad Lakshmi Baaramma ॥</em><br/><br/><b>Kanak Vrshtiy Kareyut Baare</b><br/><b>Manakamaney Siddhiy Tore ।</b><br/><b>Dinakar Koti Tejadi Holeyuv</b><br/><b>Janakarayan Kumari Beg ॥</b><br/><br/><em>Bhagyad Lakshmi Baaramma ॥</em><br/><br/>Attittalagade Bhaktar Maneyali<br/>Nity Mahotsav Nity Sumangal ।<br/>Satyav Toruv Saadhu Sajjanar<br/>Chittadi Holeyuv Putthali Bombe ॥<br/><br/><em>Bhagyad Lakshmi Baaramma ॥</em><br/><br/><b>Sankhyayillad Bhagyav Kottu</b><br/><b>Kankan Kaiy Tiruvut Baare ।</b><br/><b>Kukkumkitek Pankaj Lochne</b><br/><b>Venkataramanan Binkad Raani ॥</b><br/><br/><em>Bhagyad Lakshmi Baaramma ॥</em><br/><br/>Sakkare Tuppad Kaaluve Harisi<br/>Shukravarad Poojey Velege ।<br/>Akkareyule Agiri Rangan<br/>Chokk Purandar Vitthalan Rani ॥<br/>Bhagyad Lakshmi Baaramma ॥<br/><br/>Bhagyad Lakshmi Baaramma ।<br/>Nammamm Ni Saubhagyad Lakshmi Baaramma ॥</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "bhagyada-lakshmi-baaramma-mantra",
+        "title": "Bhagyada Lakshmi Baaramma Mantra"
+      },
+      {
+        "content": "<p>Om Vedatmane Vidmahe Hiranyagarbhay Dhimahi Tanno Brahma Prachodayat<br/><br/>Om Chaturmukhay Vidmahe Kamandalu Dharay Dhimahi Tanno brahma Prachodayat<br/><br/>Om Parmeshwrayay Vidmahe partatway Dhimahi Tanno Brahma Prachodayat<br/><br/>Om Tatpurushay Vidmahe Chaturmukhay Dhimahi Tanno Brahma Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "brahma-gayatri-mantra",
+        "title": "Brahma Gayatri Mantra"
+      },
+      {
+        "content": "<p>Buddham Saranam Gacchami।<br/>Dhammam Saranam Gacchami।<br/>Sangham Saranam Gacchami।<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "buddham-saranam-gachami-mantra",
+        "title": "Buddham Saranam Gachami Mantra"
+      },
+      {
+        "content": "<p>Om Somyarupay Vidmahe Waneshay Dheemahi Tanno Somya Prachodayat<br/><br/>Om Gajdhwajay Vidmahe Sukhhastaay Dheemahi Tanno Budhah Prachodayat<br/><br/>Om Chandraputray Vidmahe Rohini Priyay Dheemahi Tanno Budhah Prachodayat</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "budh-gayatri-mantra",
+        "title": "Budh Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Amritgangaay Vidmahe Kalarupaay Dheemahi Tanno Som Prachodayat<br/><br/>Om Kshirputraay Vidmahe Amrittatwaay Dheemahi Tanno Chandra Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "chandra-gayatri-mantra",
+        "title": "Chandra Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Dakshinamurtye Vidmahe Dhyanasthaay Dheemahi Tanno Dhishah Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "dakshinamurthy-gayatri-mantra",
+        "title": "Dakshinamurthy Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Digambaray Vidmahe Avdhutaay Dheemahi Tanno Datta Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "datta-gayatri-mantra",
+        "title": "Datta Gayatri Mantra"
+      },
+      {
+        "content": "<p>Subham Karoti Kalyanam Arogyam Dhana Sampadah<br/>Shatru Buddhi Vinashaya Deepa Jyoti Namostute<br/><br/>Deepajyothi Parabrahma Deepajyothi Janardhana<br/>Deepo Me Hara Tu Paapam Sandhya Deepa Namostute<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "deep-prajwalan-darshan-mantra",
+        "title": "Deep Prajwalan Darshan Mantra"
+      },
+      {
+        "content": "<p>Om Gurudevaay Vidmahe Parbrahmaay Dheemahi Tanno Guru Prachodayat<br/>Om VrishabhDhwajay Vidmahe Karunihastaay Dheemahi Tanno Guru Prachodayat<br/><br/>Om Angirsaay Vidmahe Divyadehaay Dheemahi Tanno Jivah Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "dev-guru-brihaspati-gayatri-mantra",
+        "title": "Dev Guru Brihaspati Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Tatpurushay Vidmahe Amrita Kalasha Hasthaay Dheemahi Tanno Dhanvantari Prachodayat<br/><br/>Om Vasudevay Vidmahe Vaidhya Rajay Dheemahi Tanno Dhanvantari Prachodayat<br/><br/>Om Amud Hasthay Vidmahe Aarogya Anugrahay Dheemahi Tanno Dhanvantri Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "dhanvantari-gayatri-mantra",
+        "title": "Dhanvantari Gayatri Mantra"
+      },
+      {
+        "content": "<p><b><br/>Pratham Pushpanjali Mantra:</b><br/>Om Jayanti, Mangala, Kali, Bhadrakali, Kapalini। <br/>Durga, Shiva, Kshama, Dhatri, Svaha, Svadha Namostu Te॥ <br/>Esha Sachandana Gandha Pushpa Bilva Patranjali Om Hreem Durgayai Namah॥<br/><br/><b>Dwitiya Pushpanjali Mantra:</b><br/>Om Mahishaghni Mahamaye Chamunde Mundamalini। <br/>Ayurarogyavijayam Dehi Devi Namostu Te॥ <br/>Esha Sachandana Gandha Pushpa Bilva Patranjali Om Hreem Durgayai Namah॥<br/><br/><br/><b>Tritiya Pushpanjali Mantra:</b><br/>Om Sarva Mangala Mangalye Shive Sarvartha Sadhike। <br/>Sharanye Tryambake Gauri Narayani Namostu Te॥1॥<br/><br/>Srishti Sthiti Vinashanam, Shaktibhute, Sanatani। <br/>Gunashraye, Gunamaye, Narayani, Namostu Te॥2॥ <br/><br/>Sharanagata Dinarta Paritrana Parayane। <br/>Sarvasyartihare Devi! Narayani! Namostu Te॥3॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "durga-puja-pushpanjali-mantra",
+        "title": "Durga Puja Pushpanjali Mantra"
+      },
+      {
+        "content": "<p>Gajananam Bhoota Ganadi Sevitam,<br/>Kapittha Jammbu Phala Charu Bhakshanam ।<br/>Umasutam Shoka Vinasha karakam,<br/>Namami Vighneshwara Pada Pankajam ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "gajananam-bhoota-ganadhi-sevitam-mantra",
+        "title": "Gajananam Bhoota Ganadhi Sevitam Mantra"
+      },
+      {
+        "content": "<p>Ganayakaya Ganadevatay Ganadhyakshaya Dhimahi ।<br/>Gunasharaya Gunamanditay Guneshanay Dhimahi ।<br/>Gunatitay Gunadhishay Gunapravishtay Dhimahi ।<br/>Ekadantaya Vakratundaya Gauritanaya Dhimahi ।<br/>Gajeshanay Bhalchandraya Shri Ganeshaya Dhimahi ॥<br/>Ganachaturay Ganapranay Ganantaratmane,<br/>Ganotsukay Ganamattay Ganotsukamanase ।<br/>Gurupoojitay Gurudevatay Gurukulasthayine,<br/>Guruvikramay Guhyapravaray Gurave Gunagurave ।<br/>Gurudaityagalachchhetre Gurudharmasadaradhyay,<br/>Guruputraparitratre Gurupakhandakhandakay ।<br/>Geetsarai Geetattvay Geetgotraya Dhimahi,<br/>Gudhagulphay Gandhamattaya Gojayapradaya Dhimahi ।<br/>Gunatitaya Gunadhishay Gunapravishtay Dhimahi,<br/>Ekadantaya Vakratundaya Gauritanaya Dhimahi ।<br/>Gajeshanay Bhalchandraya Shri Ganeshaya Dhimahi ॥<br/><br/>Granthagitay Granthageyay Granthantaratmane,<br/>Geetaleenay Geetashrayay Geetavadyapatave ।<br/>Geyacharitaay Gayakavaraay Gandharvapriyakrte,<br/>Gayakadhinavigrahay Gangajalapranayavate ।<br/>Gauristanandhayay Gaurihridayanandanay,<br/>Gaurabhanusutay Gauriganeshvaray ।<br/>Gauripranay Gauripravanay Gaurbhavaay Dhimahi,<br/>Gosahasray Govardhanaya Gopagopay Dhimahi ।<br/>Gunatitaya Gunadhishay Gunapravishtay Dhimahi,<br/>Ekadantaya Vakratundaya Gauritanaya Dhimahi ।<br/>Gajeshanay Bhalchandraya Shri Ganeshaya Dhimahi ॥</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "gananaykay-gandevatay-ganadhyakshay-mantra",
+        "title": "Gananaykay Gandevatay Ganadhyakshay Dheemahi"
+      },
+      {
+        "content": "<p>Om Shreem Gam Saubhagya Ganpataye ।<br/>Varvarda Sarvajanma Mein Vashamanya Namah ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "ganesha-shubh-labh-mantra",
+        "title": "Ganesha Shubh Labh Mantra"
+      },
+      {
+        "content": "<p>Om Tatpurushay Vidmahe Suvarnpakshaay Dheemahi Tanno Garudah Prachodayat ||<br/><br/>Om PakshiRajay Vidmahe Pakshidevaay Dheemahi Tanno Pakshi Prachodayat ||<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "garuda-gayatri-mantra",
+        "title": "Garuda Gayatri Mantra"
+      },
+      {
+        "content": "<p>Gauri Nandana Gajanana<br/>Gauri Nandana Gajanana<br/>Girija Nandana Niranjanaa<br/>Girija Nandana Niranjanaa<br/>Parvati Nandana Shubhananaa<br/>Parvati Nandana Shubhananaa<br/>Shubhananaa Shubhananaa<br/>Shubhananaa Shubhananaa<br/>Pahi Prabhomaam Pahi Prasanna<br/>Pahi Prabhomaam Pahi Prasanna ॥<br/>Gauri Nandana Gajanana<br/>Gauri Nandana Gajanana<br/>Girija Nandana Niranjanaa<br/>Girija Nandana Niranjanaa<br/>Parvati Nandana Shubhananaa<br/>Parvati Nandana Shubhananaa<br/>Shubhananaa Shubhananaa<br/>Shubhananaa Shubhananaa<br/>Pahi Prabhomaam Pahi Prasanna<br/>Pahi Prabhomaam Pahi Prasanna ॥</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "gauri-nandana-gajanana-mantra",
+        "title": "Gauri Nandana Gajanana Mantra"
+      },
+      {
+        "content": "<p>Om Bhurbhuvah Swah<br/>Tatsaviturvarenyam<br/>Bhargo Devasya Dhimahi<br/>Dhiyo Yo Nah Prachodayat ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "gayatri-mantra",
+        "title": "Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Param Hansay Vidmahe Maha Hansay Dheemahi Tanno Hansa Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "hansa-gayatri-mantra",
+        "title": "Hansa Gayatri Mantra"
+      },
+      {
+        "content": "<p>om namo bajar ka kotha,<br/>jis par pind hamaara petha,<br/>ishvar kunji brahm ka taala,<br/>hamaare aatho aamo ka jati hanumant rakhavaala<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "hanuman-shabar-raksha-mantra",
+        "title": "Hanuman Shabar Raksha Mantra"
+      },
+      {
+        "content": "<p>Om Wagishwaray Vidmahe Hayagrivay Dheemahi Tanno Hansah Prachodayat<br/><br/>Om Wanishwaray Vidmahe Haygriva Dheemahi Tanno Hayagriva Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "hayagriva-gayatri-mantra",
+        "title": "Hayagriva Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Sahastranetraay Vidmahe Vajra Hastaay Dheemahi Tanno Indrah Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "indra-gayatri-mantra",
+        "title": "Indra Gayatri Mantra"
+      },
+      {
+        "content": "<p>Jai Durge Jai Durge,<br/>Mahishvimardini Jai Durge ।<br/>Jai Durge Jai Durge,<br/>Mahishavimardini Jai Durge ।<br/>Mangalkarini Jai Durge,<br/>Jagajjanani Jai Jai Durge ।<br/>Mangalkarini Jai Durge,<br/>Jagajjanani Jai Jai Durge ॥<br/><br/>Veenapanini Pustakadharini,<br/>Amba Jai Jai Vaani ।<br/>Jagadmba Jai Jai Vaani ॥<br/><br/>Veenapanini Pustakdharini,<br/>Amba Jai Jai Vaani ।<br/>Jagdamba Jai Jai Vaani ॥<br/><br/>Vedroopini Samagayani,<br/>Amba Jai Jai Vaani ।<br/>Jagdamba Jai Jai Vaani ॥<br/><br/>Vedaroopini Samagayani,<br/>Amba Jai Jai Vaani ।<br/>Jagdamba Jai Jai Vaani ॥</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "jaya-durge-daya-durge-mantra",
+        "title": "Jaya Durge Daya Durge - Mantra"
+      },
+      {
+        "content": "<p>Kaak Cheshta, Bako Dhyanam,<br/>Swan Nindra Tathaiwa Cha।<br/>Alpahari, Grihtyaagi,<br/>Vidyarthi Panch Lakshnam॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "kaak-cheshta-vidyarthee-ke-panch",
+        "title": "Kaak Cheshta Vidyarthee Ke Panch"
+      },
+      {
+        "content": "<p>Om Kamdevay Vidmahe Pushp Wanay Dheemahi Tanno Anang Prachodayat |<br/>Om Kamdevay Vidmahe Rati Priyaye Dheemahi Tanno Anang Prachodayat ||<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "kamdev-gayatri-mantra",
+        "title": "Kamdev Gayatri Mantra"
+      },
+      {
+        "content": "<p>Kara-Charanna Kratam Vaak-Kaaya-Jam Karma-Jam Vaa ।<br/>Shravanna-Nayana-Jam Vaa Maanasam Va-Aparaadham ।<br/>Vihitam-Avihitam Vaa Sarvam-Etat-Kssamasva ।<br/>Jaya Jaya Karunna-Abdhe Shrii-Mahaadeva Shambho ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "karacharana-kritam-vaa-mantra",
+        "title": "Karacharana Kritam Vaa Mantra"
+      },
+      {
+        "content": "<p>KarpuuraGauram KarunaAvataram,<br/> Sansara-Saram BhujagendraHaram।<br/>SadaVasantam HradayaAravinde,<br/> Bhavam BhawaneeSahitam Namami॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "karpura-gauram-karuna-avataram-mantra",
+        "title": "Karpura Gauram Karuna Avataram Mantra"
+      },
+      {
+        "content": "<p>Om PadamPutraay Vidmahe Amriteshaay Dheemahi Tanno Ketu Prachodayat<br/><br/>Om Ashwadhwajaay Vidmahe Shulahastaay Dheemahi Tanno Ketu Prachodayat<br/><br/>Om Gadahastaay Vidmahe Amriteshaay Dheemahi Tannah Ketu Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "ketu-gayatri-mantra",
+        "title": "Ketu Gayatri Mantra"
+      },
+      {
+        "content": "<p>Krodhad Bhavati Sammohah Sammohat Smriti-vibhramah।<br/>Smriti-bhranshad Buddhi-nasho Buddhi-nashat Pranashyati।।<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "krodhad-bhavati-sammohah-mantra",
+        "title": "Krodhad Bhavati Sammohah Mantra"
+      },
+      {
+        "content": "<p>Om Bhagwatae Cha Vidmahe Maheshwaryae Cha Dheemahi Tannoannapurna Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-annapurna-gayatri-mantra",
+        "title": "Maa Annapurna Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Mahadewyae Widmahe Durgayae Dhimahi Tanno Devi Prachodayat<br/><br/>Om Katyaynyae Widmahe Kanykumayre Cha Dhimahi Tanno Durga Prachodayat<br/><br/>Om Girijay Cha Widmahe Shivpriyay Cha Dhimahi Tanno Durga Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-durga-gayatri-mantra",
+        "title": "Maa Durga Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Kalikae Cha Vidmahe Shamshanwasinyae Dheemahi Tanno Kali Prachodayat<br/><br/>Om Kalikayae Cha Vidmahe Shamshanwasinyae Dheemahi Tanno Aghora Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-kali-gayatri-mantra",
+        "title": "Maa Kali Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Shri Mahalakshmyae Cha Widmahe Vishnu Patnyae Cha Dhimahi Tanno Lakshmi Prachodayat Om ||<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-lakshmi-gayatri-mantra",
+        "title": "Maa Lakshmi Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Wagdaivyai Cha Vidmahe Kamrajay Dheemahi Tanno Devi Prachodayat<br/><br/>Om Saraswatyae Vidmahe Brahmputriyae Dheemahi Tanno Devi Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-saraswati-mantra",
+        "title": "Maa Saraswati Mantra"
+      },
+      {
+        "content": "<p>Om Sarvsanmohinyae Vidmahe Vishwajananyae Dheemahi tanno Shakti Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-shakti-gayatri-mantra",
+        "title": "Maa Shakti Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Janaknandinyae Vidmahe Bhumijaayae Dheemahi tanno Sita Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "maa-sita-gayatri-mantra",
+        "title": "Maa Sita Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Trimbak Yajamhe<br/>Sugandhi Puthivivradhanam ।<br/>Urvorukmiv Bandhanan<br/>Mrtyormukshiy Mamratat ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "mahamrityunjay-mantra",
+        "title": "Mahamrityunjay Mantra"
+      },
+      {
+        "content": "<p>Om Angarkay Vidmahe Shaktihastaay Dheemahi Tanno Bhomah Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "mangal-gayatri-mantra",
+        "title": "Mangal Gayatri Mantra"
+      },
+      {
+        "content": "<p><b>Bhagwan Vishnu Mulmantra</b><br/>Om Namoh Narayanaya॥<br/><br/> <b>Vishnu Bhagwate Vasudevaya Mantra</b><br/>Om Namoh Bhagawate Vasudevaya॥<br/><br/> <b>Vishnu Gayatri Mantra</b><br/>Om Shri Vishnave Cha Vidmahe Vasudevaya Dhimahi।<br/>Tanno Vishnuh Prachodayat॥<br/><br/> <b>Vishnu Shantakaram Mantra</b><br/>Shantakaram Bhujagashayanam Padmanabham Suresham<br/>Vishvadharam Gaganasadrisham Meghavarnam Shubhangam।<br/>Lakshmikantam Kamalanayanam Yogibhirdhyanagamyam<br/>Vande Vishnum Bhavabhayaharam Sarvalokaikanatham॥<br/><br/> <b>Mangalam Bhagwan Vishnu Mantra</b><br/>Mangalam Bhagwan Vishnuh, Mangalam Garunadhwajah।<br/>Mangalam Pundari Kakshah, Mangalaya Tano Harih॥<br/><br/> </p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "mangalam-bhagwan-vishnu-shri-vishnu-mantra",
+        "title": "Mangalam Bhagwan Vishnu-Shri Vishnu Mantra"
+      },
+      {
+        "content": "<p>Achyuta Ananta Govinda ।<br/><br/>Om Achyutaya Namaha ॥<br/>Om Anantaya Namaha ॥<br/>Om Govindaya Namaha ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "nama-traya-astra-mantra",
+        "title": "Nama Traya Astra Mantra"
+      },
+      {
+        "content": "<p>Namokar Mantra Hai Nyara, Isane Lakhon Ko Tara।<br/>Is Maha Mantra Ka Jaap Karo, Bhav Jal Se Mile Kinara।<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "namokar-maha-mantra",
+        "title": "Namokar Maha Mantra"
+      },
+      {
+        "content": "<p>Om Tatpurushay Vidmahe Chakratunday Dheemahi Tanno Nandih Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "nandi-gayatri-mantra",
+        "title": "Nandi Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Asato Ma Sadgamaya ।<br/>Tamaso Ma Jyotirgamaya ।<br/>Mrityorma Amritamgamaya ।<br/>Om Shantih Shantih Shantih ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "om-asato-maa-sadgamaya-pavman-mantra",
+        "title": "Om Asato Maa Sadgamaya - Pavman Mantra"
+      },
+      {
+        "content": "<p>Om Mahalakshmayai Namah<br/>Om Mahalakshmayai Namah<br/>Om Mahalakshmayai Namah<br/>Om Mahalakshmayai Namah<br/>Om Mahalakshmayai Namah<br/>Mahalakshmayai Namah<br/>Mahalakshmayai Namah<br/>Mahalakshmayai Namah<br/><br/><b>Om Mahalakshmei Namo Namah Jaap</b><br/><br/><br/>Om Mahalakshmei Namo Namah<br/>Vishnu Priyayei Namo Namah<br/>Om Dhanpradayei Namo Namah<br/>Vishwa Jananyei Namo Namah<br/><br/><br/>Om Mahalakshmei Namo Namah<br/>Vishnu Priyayei Namo Namah<br/>Om Dhanpradayei Namo Namah<br/>Vishwa Jananyei Namo Namah</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "om-mahalaxmi-namoh-namah-malakshmi-mantra",
+        "title": "Om Mahalaxmi Namoh Namah - Malakshmi Mantra"
+      },
+      {
+        "content": "<p>Om Sarve Bhavantu Sukhinah।<br/>Sarve Santu Nir-Aamayaah।<br/>Sarve Bhadraanni Pashyantu।<br/>Maa Kashcid-Duhkha-Bhaag-Bhavet॥<br/>Om Shaantih Shaantih Shaantih॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "om-sarve-bhavantu-sukhinaha-mantra",
+        "title": "Om Sarve Bhavantu Sukhinaha Mantra"
+      },
+      {
+        "content": "<p>Om Sarveshaam Svastir-Bhavatu ।<br/>Sarveshaam Shaantir-Bhavatu ।<br/>Sarveshaam Purnnam-Bhavatu ।<br/>Sarveshaam Manggalam-Bhavatu ।<br/>Om Shaantih Shaantih Shaantih ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "om-sarvesham-svastir-bhavatu-mantra",
+        "title": "Om Sarvesham Svastir Bhavatu Mantra"
+      },
+      {
+        "content": "<p>Jaya Sri-Krishna-Chaitanya Prabhu Nityananda |<br/>Sri-Advaita Gadadhara Srivasadi-Gaura-Bhakta-Vrind ||<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "panch-tattva-pranam-mantra",
+        "title": "Panch Tattva Pranam Mantra"
+      },
+      {
+        "content": "<p>Om Hanumate Namah॥<br/><br/>Hang Hanumate Rudraatmakaay Hung Phatt॥<br/><br/>Om Anjaneyaya Vidmahe Vayuputraya Dhimahi।<br/> Tanno Hanumat Prachodayat॥<br/><br/>Om Shree Vajradehaya Ramabhakthaya Vayuputhraya Namosthuthe॥<br/><br/>Manojavam Marutatulyavegam Jitendriyam Buddhimatam Varishtham।<br/> Vatatmajam Vanarayuthamukhyam Shriramadutam Sharanam Prapadye॥<br/><br/>Anjanii-Garbha Sambhuuta Kapii-Indra Sacivo Uttama।<br/> Raama-Priya Namas-Tubhyam Hanuman Rakssa Sarvadaa ॥<br/><br/>Aum Aeem Bhreem Hanumate<br/> Shree Ram Dootaaya Namaha॥<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "powerful-hanuman-mantra",
+        "title": "Powerful Hanuman Mantra"
+      },
+      {
+        "content": "<p>Karagre Vasate Lakssmih Karamadhye Sarasvati।<br/>Karamuule Tu Govindah Prabhaate Karadarshanam॥<br/>Samudravasane Devi! Paravatstanmandale।<br/>Vishnupatni! Namstubhyam Padsparsham Kshamasva Me॥<br/><br/>Brahmaa Muraaris-Tripuraantakaarii<br/>Bhaanuh Shashii Bhuumisuto Budhash-Ca।<br/>Gurush-Ca Shukrah Shani-Raahu-Ketavah<br/>Kurvantu Sarve Mama Suprabhaatam॥<br/><br/>Sanatkumaarah Sanakah Sanandanah<br/>Sanaatano[a-A]pyi-Aasuri-Pinggalau Ca।<br/>Sapta Svaraah Sapta Rasaatalaani<br/>Kurvantu Sarve Mama Suprabhaatam॥<br/><br/>Sapta-arnnavaah Sapta Kula-Acalaash-Ca<br/>Sapta-Rssayo Dviipa-Aanaani Sapta।<br/>Bhuur-Aadi-Krtvaa Bhuvanaani Sapta<br/>Kurvantu Sarve Mama Suprabhaatam॥<br/><br/>Prthvii Sa-Gandhaa Sa-Rasaas-Tatha-Apah<br/>Sparshii Ca Vaayur-Jvalitam Ca Tejah।<br/>Nabhah Sa-Shabdam Mahataa Sahaia-Eva<br/>Kurvantu Sarve Mama Suprabhaatam॥<br/><br/>Pratah smaranamtada yo<br/>viditvassdaratah Pathet<br/>Sa samyaga dharmanishthah Syat<br/>sansmrtasakhanda bharatah॥</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "pratah-smaran-dainik-upasana-shlok",
+        "title": "Pratah Smaran Dainik Upasana Shlok"
+      },
+      {
+        "content": "<p>Prathame Narjita Vidya,<br/>Dvitiye Narjitam Dhanam ।<br/>Trtiye Narjitam Punyam,<br/>Caturthe Kim Karisyati ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "prathame-narjita-vidya",
+        "title": "Prathame Narjita Vidya"
+      },
+      {
+        "content": "<p>Om Prithvi Devyae Vidmahe Sahastra Murtyae Dheemahi Tanno Prithvi Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "prithvi-gayatri-mantra",
+        "title": "Prithvi Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Vrishbhanujaay Vidmahe KrishnaPriyaay Dheemahi Tanno Radha Prachodayat ||<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "radha-gayatri-mantra",
+        "title": "Radha Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om ShiroRupaay Vidmahe Amriteshaay Dheemahi Tanno Rahu Prachodayat<br/><br/>Om Nakadhwajaay Vidmahe Padmahastaay Dheemahi Tanno Rahu Prachodayat<br/><br/>Om Nilwarnaay Vidmahe Sainhikeyay Dheemahi Tanno Rahu Prachodayat</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "rahu-gayatri-mantra",
+        "title": "Rahu Gayatri Mantra"
+      },
+      {
+        "content": "<p>Ram Raameti Raameti, Rame Raame Manorame ।<br/>Sahasra-Nama Tat-Tulyam, Raama-Naama Varanane ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "ram-raameti-raameti-shri-ram-mantra",
+        "title": "Ram Raameti Raameti - Shri Ram Mantra"
+      },
+      {
+        "content": "<p>Udbhoot-Bheeshan-Jalodar-Bhaar-Bhugnaah,<br/>Shochyam Dasha-Mupagatash-Chyut-Jeevitashah ।<br/>Tvatpaad-Pankaj-Rajo-Mrat-Digdh-Dehaah,<br/>Martya Bhawanti Makar-Dhwaj-Tulya-Roopah ॥<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "sarv-bhayanak-rog-nashak-mantra",
+        "title": "Sarv Bhayanak Rog Nashak Mantra"
+      },
+      {
+        "content": "<p>Saurastre Somanatha Cha Srishaile Mallikarjunam ।<br/>Ujjayinyam Mahakalamomkarammaleswaram ॥ 1 ॥<br/>Paralya Vaidyanatham Cha Dakkinam Bhimashankaram ।<br/>Setubandhe Tu Ramesham Nagesham Darukavane ॥ 2 ॥<br/><br/>Varansyam Tu Vishwesham Trimbakam Gautamitate ।<br/>Himalaye Tu Kedaram Ghushmesham Cha Shivalaye ॥ 3 ॥<br/><br/>Etani Jyotirlingani Saayam Pratah Pathennarah ।<br/>Saptajanmakritam Papam Smarnen Binasyati ॥ 4 ॥<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "saurashtre-somanathan-dwadas-jyotirlingani-mantra",
+        "title": "Saurashtre Somanathan - Dwadas Jyotirlingani Mantra"
+      },
+      {
+        "content": "<p>Seetha Kalyaana Vaibhogame<br/>Rama Kalyaana Vaibhogame<br/>Pavanaja Sthuthi Paathra Paavana Charithra<br/>Ravi Soma Vara Nethra Ramaneeya Gatra<br/><br/>Bhaktha Jana Paripala Bharitha Sara Jaala<br/>Bhukthi Mukthitha Leela Bhudeva Paala <br/><br/>Paamarasura Bheema Paripoorna Kaama<br/>Syaama Jagathabiraama Saaketha Dhaama<br/><br/>Sarvalokaa Dhaara Samaraika Veera<br/>Garva Maanasa Dura Kanakaaga Dheera<br/><br/>Nigamagama Vihaara Nirupama Shareera<br/>Naga Daragha Vidhara Nataloka Dhaara<br/><br/>Paramesha Nutha Geetha Bhava Jaladhi Potha<br/>Tharani Kula Sanchata Thyagaraja Nutha<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "seetha-kalyana-vaibhogame-sita-kalyana",
+        "title": "Seetha Kalyana Vaibhogame"
+      },
+      {
+        "content": "<p>Om Shanicharya Namah<br/><br/>Om Bhag Bhavaay Vidmahe Mrityu Rupaay Dheemahi Tanno Shourihi Prachodayat<br/><br/>Om Surya Putray Vidmahe Mrityu Rupaay Dheemahi Tanno Shourihi Prachodayat<br/><br/>Om Kaakdhwajaay Vidmahe Khadag hastaay Dheemahi tanno Mandah Prachodayat<br/><br/>Om Shanescharaay Vidmahe ChayaPutraay Dheemahi Tanno Mandah Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shani-gayatri-mantra",
+        "title": "Shani Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Panch Janyay Vidmahe Padm Garbhay Dheemahi Tanno Shankhah Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shankh-gayatri-mantra",
+        "title": "Shankh Gayatri Mantra"
+      },
+      {
+        "content": "<p>Twampura Sagarotpann Vishnunavighrtahkare ।<br/>Devaishchapujitah Sarvathaupachchajanyamanostute ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shankh-poojan-mantra",
+        "title": "Shankh Poojan Mantra"
+      },
+      {
+        "content": "<p>Om Tatpurushaya Vidhmahe Maha Senaya Dheemahi Thannoh Shanmukha Prachodhayat ||<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shanmukha-gayatri-mantra",
+        "title": "Shanmukha Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Dyau Shanti-Rantariksha-Gwam Shantih,<br/>Prithvi Shanti-Rapah Shanti-Roshadhayah Shantih ।<br/><br/>Vanas-Patayah Shanti-Vishwed Devah Shanti-Brahma Shantih,<br/>Sarvag-Wam Shantih Shanti-Reva Shantih Sa Ma Shanti-Redhi॥<br/><br/>Om Shantih Shantih Shantih Om॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shanti-mantra",
+        "title": "Shanti Mantra"
+      },
+      {
+        "content": "<p>Om Tatpurushaya Vidmahe Mahadevaya Dheemahi Tanno Rudrah Prachodayat<br/><br/>Om Sarveswaray Vidmahe Shulhastaay Dheemahi Tanno Rudrah Prachodayat<br/><br/>Om Panchvaktray Vidmahe Sahastraakshay Mahadevay Dheemahi Tanno Rudrah Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shiv-rudra-gayatri-mantra",
+        "title": "Shiv Rudra Gayatri Mantra"
+      },
+      {
+        "content": "<p>Om Mrityunjay Pareshaan Jagadaabhayanaashan<br/>Tav dhyaanen devesh mrityupraapnoti jeevati<br/><br/>Vande ishaan devaay namastasmai pinakine<br/>Aadimadhyaant rupaay mrityunaasham karotu me<br/><br/>Namastasmai bhagwate kailasachal vaasine<br/>Namobrahmendra rupaay mrityunaasham karotu me<br/><br/>Trayambakaya namastubhyam panchasyaay namo namah<br/>Namo dordandachaapaay mam mrityum vinaashay<br/><br/>Namordhendu swarupaay Namo digvasanaay cha<br/>Namo Bhaktarti hantre cha mam mrityum vinaashay<br/><br/>Devam mrituvinaashanam bhayaharam saamrajya mukti pradam<br/>Nana bhutagananvitam divi padaih devaih sada sevitam<br/><br/>Agyaanaandhakanaashanam shubhkaram vidhyaasu saukhya pradam<br/>Sarv sarvapati maheshwara haram mrityunjay bhaavaye<br/><br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shiva-aahvaan-mantra",
+        "title": "Shiva Aahvaan Mantra"
+      },
+      {
+        "content": "<p>Durga Durgarti Shamani Durgapadvinivarini ।<br/>Durgamachthini Durgasadhini Durgashini ।<br/><b>Durgatodwarini Durg Nihantree Durgamaapahan ।</b><br/><b>Durgam Gyanada Durgadayatilokdavanala ।</b><br/><b>Durgama Durgamaloka Durgamataswarpini ।</b><br/><br/>Durgamarprada Durgamavidya Durgamashrita ।<br/>Durgamgyanasasthana Durgamadhyanabhasini ।<br/><br/><b>Durgamoha Durgamga Durgamarthwarpini ।</b><br/><b>Durgamasurashanantri Durgamayudharadhini ।</b><br/><br/>Durgamangi Durgamata Durgamya Durgameshwari ।<br/>Durgabhima Durgabhama Durlabha Durgadharini ।<br/><br/><b>Namavali Mamayastu Durgaya Mam Manas: ।</b><br/><b>Pathet Sarvam Bhayanumukto Bhavishyati Na Sanshayah ।</b><br/><br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-durga-dwatrinshat-nam-mala-mantra",
+        "title": "Shri Durga Dwatrinshat Nam Mala Mantra"
+      },
+      {
+        "content": "<p>Om Devkinandanay Vidhmahe Vasudevaay Dheemahi Tanno Krishna Prachodayath<br/><br/>Om Dhamodharaya Vidhmahe Vasudevay Dheemahi Tanno Krishna Prachodyat<br/><br/>Om Shri Krishnay Vidhmahe Damodaray Dheemahi Tanno Vishnu Prachodyat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-krishna-gayatri-mantra",
+        "title": "Shri Krishna Gayatri Mantra"
+      },
+      {
+        "content": "<p>Maatah Sohamupastitosmi Puratah Poorvapratigyan Smaran,<br/>Pratyashravi Purahi Tenty Samaye Praptun Samipan Tav ।<br/>Grahagrasamishadyaya Hyanumatasturyashraman Praptuvan,<br/>Yatprityai Ch Samagatohamadhuna Tasyai Jananyai Namah ॥<br/><br/>Broote Matrsama Shrutirbhagavati Yadbarhadaranyakai,<br/>Tatwan Bestyatti Matrumanch Pitramanacharyavanityasou ।<br/>Tatradau Kil Matrusikshanbidhin Sarvottaman Shasati,<br/>Poojyatpoojyataran Samarthayati Yaan Tasyai Jananyai Namah ॥<br/><br/>Amba Taat Iti Svashikshanavashaaduchcharanaprakriyaan,<br/>Ya Soote Prathaman Kv Shaktirih No Matustu Shikshaan Vina ।<br/>Vyutpattin Kramashashch Sarvajanikin Tattatpadaartheshu Ya,<br/>Hyadhatte Vyavaharamapyavakilan Tasyai Jananyai Namah ॥<br/><br/>Ishtanishtahitaahitadidhishanahauna Vayan Shaishave,<br/>Kithan Sushkulavit Karin Dadhato Bhakshyasaya Balishah ।<br/>Matra Varitsahasah Khalutto Bhakshanyabhakshyani Wa,<br/>Vyagyasishm Hitahite Ch Sutaran Tasyai Jananyai Namah ॥<br/><br/>Aatmagyanasamarjanopakaranan Yaddehayantran Viduh<br/>Tadrogadibhayanmrigorgaripuvratadavanti Swayam ।<br/>Pushnanti Shishumadaradgurukulan Prapayy Kalakramat<br/>Ya Sarvagyashikhamanin Vitanute Tasyai Jananyai Namah ॥<br/><br/>- Shri Shankaracharya Krutan</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-mathru-panchakam",
+        "title": "Shri Mathru Panchakam"
+      },
+      {
+        "content": "<p>Nrusingh Kavacham Vakshye Prahladanoditan Pura ।<br/>Sarvarakshakaran Punyan Sarvopadravanashanan ॥<br/><b>Sarvasampatkaran Chaiv Swargamoksaprakarikam ।<br/>Dhyaatva Nrsinhan Deveshan Hemasinhasanasthitan ॥</b><br/><br/>Vivrtasyan Trinayanan Sharadindusamaprabhan ।<br/>Lakshmyalingitavamangam Vibhootibhirupashritan ॥<br/><br/><b>Chaturbhujan Komalangam Svarnakundalashobhitan ।<br/>Urojashobhitoraskan Ratnakeyooramudritan ॥</b><br/><br/>Taptakaanchanasankaashan Pitanirmalavaasanan ।<br/>Indraadisuramaulisthasphuranmaanikyadiptibhi: ॥<br/><br/><b>Viraajitapadadvandvan Shankhachakraadihetibhi: ।<br/>Garutmata Ch Vinayat Stooyamanan Mudanvitan ॥</b><br/><br/>Svahrtakamalasanvaasam Krtva Tu Kavacham Pathet<br/>Nrsinho Me Shir: Paatu Lokarakshaatmasambhav: ।<br/>Sarvagopi Stambhavaas: Phaalan Me Rakshatu Dhvanan ।<br/>Narasinho Me Drshau Paatu Somasooryaagnilochan: ॥<br/><br/><b>Shrti Me Paatu Naraharirmunivaryastutipriy: ।<br/>Nasan Me Sinhanasastu Mukhan Lakshmimukhapriy: ॥</b><br/><br/>Sarvavidyaadhip: Paatu Nrsinho Rasanaan Mam ।<br/>Vaktran Patvinduvadan: Sada Prahladavandit: ॥<br/><br/><b>Nrusingh: Patu Me Kanthan Skandhau Bhoobharanaantakrt ।<br/>Divyastrashobhitabhujo Nrsinh: Paatu Me Bhujau ॥</b><br/><br/>Karau Me Devavarado Nrsinh: Paatu Sarvat: ।<br/>Hrdayan Yogisaadhyashch Nivaasan Paatu Me Hari: ॥<br/><br/><b>Madhyan Paatu Hiranyaakshavaksh:kukshividaaran: ।<br/>Nabhin Me Paatu Nrhari: Svanaabhibrahmasanstut: ॥</b><br/><br/>Brahmandakotay: Katyaan Yasyasau Paatu Me Katin ।<br/>Guhyan Me Paatu Guhyaanaan Mantraanaan Guhyarupadhrt ॥<br/><br/><b>Uru Manobhav: Paatu Jaanuni Nararoopadhrt ।<br/>Janghe Paatu Dharaabhaaraharta Yosau Nrkesari ॥</b><br/><br/>Suraraajyaprad: Paatu Paadau Me Nrharishvar: ।<br/>Sahasrashirsha Purush: Paatu Me Sarvashastanun ॥<br/><br/><b>Mahora: Purvat: Mahogr: Paatu Mahaaviraagrajognit: ।<br/>Mahaavishnurdakshine Tu Mahaajvaalastu Nirrutau ॥</b><br/><br/>Pashchime Paatu Sarvesho Dishi May Sarvtomukh: ।<br/>Nrusinh: Paatu Vaayavyaan Saumyaan Bhooshanavigrah: ॥<br/><br/><b>Ishanya Patu Bhadro Me Sarvamangaladaayak: ।<br/>Samsarabhayad: Patu Mrityumurthurnrkeshri ॥</b><br/><br/>Idan Nrsinhakavachan Prahlaadamukhamanditan .<br/>Bhaktimaany: Pathennityan Sarvapaapai: Pramuchyate ॥<br/><br/><b>Putravan Dhanavan Loke Dirghayurupajayate ।<br/>Yanyan Kamayate Kamam Tamtam Prapnotyasansyam ॥</b><br/><br/>Sarvatr Jayavaapnoti Sarvatr Vijayi Bhavet ।<br/>Bhumyantarikshadivanan Grahanan Vinivaranan ॥<br/><br/><b>Vrshchikoragasambhootavishapaharanan Paran ।<br/>Brahmarakshasayakshanaan Durotsaranakarnan ॥</b><br/><br/>Bhoorje Va Taalapatre Va Kavachan Likhitan Shubhan ।<br/>Karamoole Dhrtan Yen Siddhyeyu: Karmasiddhay: ॥<br/><br/><b>Devasuramanushyeshu Svan Svamev Jayan Labhet ।<br/>Ekasandhyan Trisandhyan Va Ya: Pathenniyato Nar: ॥</b><br/><br/>Sarvamangalamaangalyambhuktin Muktin Ch Vindati ।<br/>Dvaatrinshatisahasraani Paathaachchhuddhaatmabhirnrbhi: ।<br/>Kavachasyaasy Mantrasy Mantrasiddhi: Prajaayate ।<br/>Aanen Mantraraajen Krtva Bhasmaabhimantranam ॥<br/><br/><b>Tilakan Bibhryaadyastu Tasy Grihabhayam Haret ।<br/>Trivaran Japamanastu Dattan Vaaryabhimantry Ch ॥</b><br/><br/>Praashayedyan Naran Mantran Nrsinhadhyaanamaacharet ।<br/>Tasy Roga: Pranashyanti Ye Ch Syu: Kukshisambhava: ॥<br/><br/><b>Kimatr Bahunokten Nrsinhasadrsho Bhavet ।<br/>Manasa Chintitan Yastu Sa Tachchaapnotyasanshayan ॥</b><br/><br/>Garjantam Gurjayatam Nijabhujapatlam Sphotyantan<br/>Harantam Dipyantam Tapayantam Divi Bhuvi Ditijan Kshapeyant Rasantam ।<br/>Krudant Roshyantam Dishidishi Satatam Sambhrantam Harantam ।<br/>Bikhyamtam Ghurnyantam Karnikarstaidivyasingh Namami ॥<br/><b>॥ Iti Prahladaproktan Narasinhakavachan Sampurnamm ॥</b><br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-narasimha-kavacham-mantra",
+        "title": "Shri Narasimha Kavacham Mantra"
+      },
+      {
+        "content": "<p>Om Ugram Veeram Mahavishnum Jwalantm Savrtomukhm ।<br/>Narasimha Bheeshanm Bhadram Mrityumrityam Namamyaham ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-narasimha-mantra",
+        "title": "Shri Narasimha Mantra"
+      },
+      {
+        "content": "<p>Om Dashrathye Vidmahe Sita Wallabhay Dheemahi Tanno Rama Prachodayat<br/>Om Bharatagrajaay Vidmahe Sitawallabhay Dheemahi Tanno Ramah Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-ram-gayatri-mantra",
+        "title": "Shri Ram Gayatri Mantra"
+      },
+      {
+        "content": "<p>Ram Ram Ram Ram Naam Tarakam<br/>Ram Krishna Vasudev Bhakti Mukti Dayakam<br/>Ram Ram Ram Ram Naam Tarakam<br/>Ram Krishna Vasudev Bhakti Mukti Dayakam<br/><br/>Janaki Manoharam Sarvalok Naikam<br/>Janaki Manoharam Sarvalok Naikam<br/>Janaki Manoharam Sarvalok Naikam<br/><br/>Sankaradi Sevayam Punynama Kirtanam<br/>Sankaradi Sevayam Punynama Kirtanam<br/><br/>Ram Ram Ram Ram Naam Tarakam<br/>Ram Krishna Vasudev Bhakti Mukti Dayakam<br/><br/>Veershur Vanditam Ravanadi Nashkam<br/>Veershur Vanditam Ravanadi Nashkam<br/><br/>Anjaneya Biography Rajamantra Rupakam<br/>Anjaneya Biography Rajamantra Rupakam<br/><br/>Ram Ram Ram Ram Naam Tarakam<br/>Ram Krishna Vasudev Bhakti Mukti Dayakam<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shri-rama-nama-tarakam",
+        "title": "Shri Rama Nama Tarakam"
+      },
+      {
+        "content": "<p>Om Bhrigujaay Vidmahe Divya dehaay Dheemahi Tanno Shukra Prachodayat<br/><br/>Om Bhriguputraay Vidmahe Shwetwahnaay Dheemahi Tanno Kavi Prachodayat<br/><br/>Om Bhriguwanshjatay Vidmahe Shwetwahnay Dheemahi Tanno Shukra Prachodayat<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "shukra-gayatri-mantra",
+        "title": "Shukra Gayatri Mantra"
+      },
+      {
+        "content": "<p>Nama Om Vishnu-padaya Krishna-preshthaya Bhu-tale,<br/>Srimate Bhaktivedanta-svamin Iti Namine.<br/>Namas Te Sarasvate Deve Gaura-vani-pracarine,<br/>Nirvisesha-sunyavadi-pascatya-desa-tarine.<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "srila-prabhupada-pranati-mantra",
+        "title": "Srila Prabhupada Pranati Mantra"
+      },
+      {
+        "content": "<p>Om Aadityaya vidmahe diwakaraya dhimahi tanno surya prachodayat ||<br/><br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "surya-gayatri-mantra",
+        "title": "Surya Gayatri Mantra"
+      },
+      {
+        "content": "<p>Aadityasya Namaskaran ye kurventi dine dine |<br/>Aayu pragya bal veerya tejastesa cha jayate ||<br/><br/>Om Maitreya Namaha<br/>Om Ravaye Namaha<br/>Om Suryaya Namaha<br/>Om Bhanave Namaha<br/>Om Khagaya Namaha<br/>Om Pushne Namaha<br/>Om Hiranyagarbhaya Namaha<br/>Om Marichaye Namaha<br/>Om Adityaya Namaha<br/>Om Savitre Namaha<br/>Om Arkaya Namaha<br/>Om Bhaskaraya Namaha<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "surya-namaskar-mantra",
+        "title": "Surya Namaskar Mantra"
+      },
+      {
+        "content": "<p>Svasti Prajabhyah Paripalayantam<br/>Nyayena Margena Maheem Maheeshah ।<br/>Gobrahmanebhyah Subham Astu Tityam<br/>Lokah Samastah Sukhino Bhavantu ॥<br/>Om Shanti Shanti Shanti।<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "svasti-prajabhyah-paripalayantam-mantra",
+        "title": "Svasti Prajabhyah Paripalayantam Mantra"
+      },
+      {
+        "content": "<p>Om Tulsidevye Cha Vidmahe Vishnupriyaye Cha Dheemahi Tanno Vrinda Prachodayat<br/>Om Tripuray Vidmahe Tulsi Patray Dheemahi tanno Tulsi Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "tulsi-mata-gayatri-mantra",
+        "title": "Tulsi Mata Gayatri Mantra"
+      },
+      {
+        "content": "<p>Vakra-Tunndda Maha-Kaaya,<br/>Suurya-Kotti Samaprabha ।<br/>Nirvighnam Kuru Me Deva,<br/>Sarva-Kaaryessu Sarvadaa ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "vakratunda-mahakaya-ganesh-shlok-mantra",
+        "title": "Vakratunda Mahakaya Ganesh Shlok Mantra"
+      },
+      {
+        "content": "<p>Om Jal Bimbaay Vidmahe Nil Purushay Dheemahi Tanno Varuna Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "varuna-gayatri-mantra",
+        "title": "Varuna Gayatri Mantra"
+      },
+      {
+        "content": "<p>Venkatachala Nilayam Vaikuntha Purvasam<br/>Pankaj Netram Param Pavitram<br/>Shanka Chakradhar Chinmaya Roopam<br/>Venkatachala Nilayam Vaikuntha Purvasam<br/>Pankaj Netram Param Pavitram<br/>Shanka Chakradhar Chinmaya Roopam<br/><br/>Ambujodbhav Vinutan Aganit Gun Naaman<br/>Tumburu Narad Ganavilolan<br/><br/><em>Venkatachala Nilayam Vaikuntha Purvasam<br/>Pankaj Netram Param Pavitram</em><br/><em>Pankaj Netram Param Pavitram</em><br/><em>Shanka Chakradhar Chinmaya Roopam</em><br/><br/>Makar Kundaladhar Madanagopalan<br/>Bhakt Poshak Shri Purandar Vithalan<br/><br/><em>Venkatachala Nilayam Vaikuntha Purvasam<br/>Pankaj Netram Param Pavitram</em><br/><em>Pankaj Netram Param Pavitram</em><br/><em>Shanka Chakradhar Chinmaya Roopam</em><br/><br/>Venkatachala Nilayam</p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "venkatachala-nilayam-vaikuntha-purvasam",
+        "title": "Venkatachala Nilayam Vaikuntha Purvasam"
+      },
+      {
+        "content": "<p>Vidya Dadati Vinayam,<br/>Vinaya Dadati Paatrataam।<br/>Paatratva Dhanamaapnoti,<br/>Dhanaat Dharmam Tatah Sukham॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "vidya-dadati-vinayam-mantra",
+        "title": "Vidya Dadati Vinayam Mantra"
+      },
+      {
+        "content": "<p>Om Surya Putraay Vidmahe Mahakalay Dheemahi Tanno Yamah Prachodayat<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "yama-gayatri-mantra",
+        "title": "Yama Gayatri Mantra"
+      },
+      {
+        "content": "<p>Yeshan Na Vidya Na Tapo Na Danam,<br/>Jyanam Na Shilam Na Guno Na Dharmah ।<br/>Te Martyaloke Bhuvi Bharabhutah,<br/>Manushyarupena Mrrigashcharanti ॥<br/></p>",
+        "coverImage": "https://firebasestorage.googleapis.com/v0/b/vividhgyan-sanghralaya.appspot.com/o/aartis%2Fvg2.jpg?alt=media&token=6a33a840-8f0a-430c-b1de-e9e8926efb36",
+        "slug": "yeshaan-na-vidya-na-tapo-na-danan",
+        "title": "Yeshaan Na Vidya Na Tapo Na Danan"
+      }
+    ]
+  },
+  "__N_SSG": true
+}

@@ -3,9 +3,13 @@ const morgan = require("morgan");
 var cors = require("cors");
 const path = require("path");
 
+// admin route
 const indexRouter = require("./routes/index");
+
+// exposed - app
 const kathaRouter = require("./routes/katha_api");
 const mantraRouter = require("./routes/mantras");
+const widgetRouter = require("./routes/widgets");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -30,7 +34,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", indexRouter);
-app.use("/api", [kathaRouter, mantraRouter]);
+app.use("/api", [kathaRouter, mantraRouter, widgetRouter]);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

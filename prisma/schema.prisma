@@ -23,6 +23,8 @@ model Mantra {
 
 model Widgets {
   id        Int      @id @default(autoincrement())
+  position String @default("")
   type  String
   data Json 
+  @@unique([position, type])
 }
