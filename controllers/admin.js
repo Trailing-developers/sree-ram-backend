@@ -1,3 +1,4 @@
+const { DARSHAN_WIDGETS } = require("../mocks");
 const {
   getHomeBanners,
   getHomeCalendarBanners,
@@ -16,6 +17,7 @@ const createOption = (req, res) => {
     "banners",
     "home_calendar_banner",
     "darshan_banner",
+    "darshan_widgets",
   ];
   res.render("create", { types });
 };
@@ -43,6 +45,21 @@ const default_array_banner = {
     },
   ],
 };
+const default_array_widgets = {
+  data: [
+    {
+      widgetTitle: null,
+      items: [
+        {
+          name: null,
+          place: null,
+          imgUrl: null,
+          pageId: null,
+        },
+      ],
+    },
+  ],
+};
 async function getPageContent(type) {
   if (type === "banners") {
     const banners = await getHomeBanners();
@@ -55,11 +72,18 @@ async function getPageContent(type) {
     return banners;
   } else if (type === "darshan_banner") {
     const banners = await getDarshanBanners();
-    console.log(banners);
     if (!banners || banners == null) {
       return default_array_banner;
     }
     return banners;
+  } else if (type === "darshan_widgets") {
+    // const banners = await getDarshanBanners();
+    // console.log(banners);
+    // if (!banners || banners == null) {
+    //   return default_array_banner;
+    // }
+    // return DARSHAN_WIDGETS;
+    return default_array_widgets;
   }
   return null;
 }

@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.text())
         .then((html) => {
           createContent.innerHTML = html;
-          addDynamicItemHandler();
+          if (type === "darshan_widgets") {
+            addWidgetItemHandler();
+          } else {
+            addDynamicItemHandler();
+          }
         })
         .catch((error) => {
           console.error("Error fetching the create page:", error);
@@ -78,5 +82,122 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+  }
+
+  function addWidgetItemHandler() {
+    const addCardButton = document.getElementById("add-card-button");
+    const container = document.getElementById("card-container");
+    let cardCounter =
+      parseInt(
+        document.getElementById("card-container").dataset.cardCount,
+        10
+      ) || 0;
+
+    addCardButton.addEventListener("click", () => {
+      cardCounter += 1;
+      const cardGroup = document.createElement("div");
+      cardGroup.classList.add("card", "border", "p-4", "mb-4");
+      cardGroup.innerHTML = `
+          <div class="flex items-center mb-2">
+            <button type="button" class="add-item-button bg-blue-500 text-white px-2 py-1 rounded">Add Item</button>
+            <button type="button" class="remove-card-button bg-red-500 text-white px-2 py-1 rounded">Remove Card</button>
+          </div>
+          <div>
+          <label
+            for="widgetTitle"
+            class="block text-sm font-medium text-gray-700"
+            >Widget Title:</label
+          >
+          <input
+            type="text"
+            name="cards[${cardCounter}][title][]"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+          <div class="item-container mb-4"></div>
+        `;
+
+      container.appendChild(cardGroup);
+    });
+
+    container.addEventListener("click", (event) => {
+      if (event.target && event.target.classList.contains("add-item-button")) {
+        const itemContainer = event.target
+          .closest(".card")
+          .querySelector(".item-container");
+        const inputGroup = document.createElement("div");
+        inputGroup.classList.add("flex", "items-center", "mb-2");
+        inputGroup.innerHTML = `
+        <div class="flex items-center mb-2">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Name:</label
+          >
+          <input
+            type="text"
+            name="cards[${cardCounter}][name][]"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label for="place" class="block text-sm font-medium text-gray-700"
+            >Place:</label
+          >
+          <input
+            type="text"
+            name="cards[${cardCounter}][place][]"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label
+            for="imgUrl"
+            class="block text-sm font-medium text-gray-700"
+            >Image:</label
+          >
+          <input
+            type="text"
+            name="cards[${cardCounter}][imgUrl][]"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label
+            for="pageId"
+            class="block text-sm font-medium text-gray-700"
+            >PageId:</label
+          >
+          <input
+            type="text"
+            name="cards[${cardCounter}][pageId][]"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+        </div>
+
+          <button
+            type="button"
+            class="delete-item-button bg-red-500 text-white px-2 py-1 rounded"
+          >
+            Delete
+          </button>
+      </div>
+          `;
+
+        itemContainer.appendChild(inputGroup);
+      }
+
+      if (
+        event.target &&
+        event.target.classList.contains("delete-item-button")
+      ) {
+        event.target.parentNode.remove();
+      }
+      if (
+        event.target &&
+        event.target.classList.contains("remove-card-button")
+      ) {
+        event.target.closest(".card").remove();
+      }
+    });
   }
 });
