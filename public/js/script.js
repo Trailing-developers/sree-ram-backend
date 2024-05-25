@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardCounter += 1;
       const cardGroup = document.createElement("div");
       cardGroup.classList.add("card", "border", "p-4", "mb-4");
+      cardGroup.dataset.id = cardCounter;
       cardGroup.innerHTML = `
           <div class="flex items-center mb-2">
             <button type="button" class="add-item-button bg-blue-500 text-white px-2 py-1 rounded">Add Item</button>
@@ -114,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
         </div>
-          <div class="item-container mb-4"></div>
+          <div class="item-container mb-4" data-id=${cardCounter}></div>
         `;
 
       container.appendChild(cardGroup);
@@ -125,8 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemContainer = event.target
           .closest(".card")
           .querySelector(".item-container");
+        const dataSetId = itemContainer.dataset.id;
         const inputGroup = document.createElement("div");
         inputGroup.classList.add("flex", "items-center", "mb-2");
+
         inputGroup.innerHTML = `
         <div class="flex items-center mb-2">
         <div>
@@ -135,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
           >
           <input
             type="text"
-            name="cards[${cardCounter}][name][]"
+            name="cards[${dataSetId}][name][]"
             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
         </div>
@@ -145,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
           >
           <input
             type="text"
-            name="cards[${cardCounter}][place][]"
+            name="cards[${dataSetId}][place][]"
             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
         </div>
@@ -157,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
           >
           <input
             type="text"
-            name="cards[${cardCounter}][imgUrl][]"
+            name="cards[${dataSetId}][imgUrl][]"
             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
         </div>
@@ -169,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
           >
           <input
             type="text"
-            name="cards[${cardCounter}][pageId][]"
+            name="cards[${dataSetId}][pageId][]"
             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
         </div>

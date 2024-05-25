@@ -3,7 +3,7 @@
   <form method="POST" action="/api/darshan_widgets">
     <div
       id="card-container"
-      data-card-count="<%= content.length %>"
+      data-card-count="<%= content.data.length %>"
       class="mb-4"
     >
       <% content.data.forEach(function(card, cardIndex) { %>
@@ -29,8 +29,8 @@
             value="<%= card.widgetTitle %>"
           />
         </div>
-        <div class="item-container space-y-4">
-          <% card.items.forEach(function(item, itemIndex) { %>
+        <div class="item-container space-y-4" data-id="<%= cardIndex %>">
+          <% card.data.forEach(function(item, itemIndex) { %>
           <div class="flex items-center mb-2">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700"

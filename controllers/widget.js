@@ -97,7 +97,8 @@ function createBannerBody(items) {
 
 const createDarshanWidgets = (req, res) => {
   const items = req.body;
-  const response = addWidget("DARSHAN", "WIDGETS", items);
+  const widgetJsonBody = createWidgetBody(items);
+  const response = addWidget("DARSHAN", "WIDGETS", widgetJsonBody);
   response
     .then((data) => {
       res.json({
@@ -109,6 +110,31 @@ const createDarshanWidgets = (req, res) => {
       res.status(500).json({ status: "error", message: err.message });
     });
 };
+
+function createWidgetBody(items) {
+  let widgetJsonBody = [];
+  for (let i = 0; i < items.cards.length; i++) {
+    let card = {};
+    console.log("testing233 the body");
+    console.log(items.cards[i]);
+
+    card["widgetTitle"] = items.cards[i].title[0];
+
+    let cardItems = [];
+    for (let j = 0; j < items.cards[i].name.length; j++) {
+      cardItems.push({
+        name: items.cards[i].name[j],
+        place: items.cards[i].place[j],
+        imgUrl: items.cards[i].imgUrl[j],
+        pageId: items.cards[i].pageId[j],
+      });
+    }
+    card["data"] = cardItems;
+    widgetJsonBody.push(card);
+  }
+
+  return widgetJsonBody;
+}
 
 module.exports = {
   createHomeBanner,

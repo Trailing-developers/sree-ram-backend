@@ -18,6 +18,16 @@ const getDarshanWidgets = async () => {
   return widgets;
 };
 
+const getDarshanWidgetList = async () => {
+  const widgets = await prisma.widgets.findFirst({
+    where: {
+      position: "DARSHAN",
+      type: "WIDGETS",
+    },
+  });
+  return widgets;
+};
+
 const getHomeBanners = async () => {
   const widgets = await prisma.widgets.findFirst({
     where: {
@@ -48,16 +58,6 @@ const getDarshanBanners = async () => {
   return widgets;
 };
 
-const getDarshanWigets = async () => {
-  const widgets = await prisma.widgets.findMany({
-    where: {
-      position: "DARSHAN",
-      type: "WIDGETS",
-    },
-  });
-  return widgets;
-};
-
 const addWidget = async (position, type, body) => {
   const response = await prisma.widgets.upsert({
     where: {
@@ -81,10 +81,10 @@ const addWidget = async (position, type, body) => {
 
 module.exports = {
   addWidget,
-  getDarshanWigets,
   getHomeWidgets,
   getHomeBanners,
   getHomeCalendarBanners,
   getDarshanBanners,
   getDarshanWidgets,
+  getDarshanWidgetList,
 };

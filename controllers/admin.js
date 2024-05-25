@@ -3,6 +3,8 @@ const {
   getHomeBanners,
   getHomeCalendarBanners,
   getDarshanBanners,
+  getDarshanWidgets,
+  getDarshanWidgetList,
 } = require("../repository/widget");
 
 const updateSuccess = (req, res) => {
@@ -77,13 +79,12 @@ async function getPageContent(type) {
     }
     return banners;
   } else if (type === "darshan_widgets") {
-    // const banners = await getDarshanBanners();
-    // console.log(banners);
-    // if (!banners || banners == null) {
-    //   return default_array_banner;
-    // }
-    // return DARSHAN_WIDGETS;
-    return default_array_widgets;
+    const data = await getDarshanWidgetList();
+    if (!data || data == null) {
+      return default_array_widgets;
+    }
+    console.log(JSON.stringify(data));
+    return data;
   }
   return null;
 }
