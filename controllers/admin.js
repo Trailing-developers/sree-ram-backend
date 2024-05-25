@@ -20,6 +20,7 @@ const createOption = (req, res) => {
     "home_calendar_banner",
     "darshan_banner",
     "darshan_widgets",
+    "temples",
   ];
   res.render("create", { types });
 };

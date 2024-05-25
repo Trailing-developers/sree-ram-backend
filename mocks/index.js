@@ -318,7 +318,6 @@ module.exports.MANTRA_LIST = [
 ];
 
 module.exports.TEMPLE_DETAIL_PAGE = {
-  id: "temple-123",
   image: "https://example.com/temple-image.jpg",
   name: "Temple Name",
   description: "This is a detailed description of the temple.",
@@ -329,7 +328,6 @@ module.exports.TEMPLE_DETAIL_PAGE = {
     distanceFromCityCenter: 5,
     distanceUnit: "KM",
     distanceFromUser: 10,
-    distanceUnit: "KM",
   },
   locationOfUser: {
     latitude: 12.345678,
