@@ -115,8 +115,6 @@ function createWidgetBody(items) {
   let widgetJsonBody = [];
   for (let i = 0; i < items.cards.length; i++) {
     let card = {};
-    console.log("testing233 the body");
-    console.log(items.cards[i]);
 
     card["widgetTitle"] = items.cards[i].title[0];
 

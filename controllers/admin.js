@@ -83,7 +83,6 @@ async function getPageContent(type) {
     if (!data || data == null) {
       return default_array_widgets;
     }
-    console.log(JSON.stringify(data));
     return data;
   }
   return null;
