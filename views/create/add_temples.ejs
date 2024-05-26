@@ -1,90 +1,309 @@
 <h2 class="text-xl font-semibold mb-2">Add Temple</h2>
 <form action="/api/temple" method="POST" class="space-y-4">
-    <div>
-      <label for="name" class="block text-sm font-medium text-gray-700"
-        >Name:</label
-      >
-      <input
-        type="text"
-        id="name"
-        name="name"
-        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-        required
-      />
-    </div>
-    <div>
-      <label for="image" class="block text-sm font-medium text-gray-700"
-        >Image:</label
-      >
-      <input
-        type="text"
-        id="image"
-        name="image"
-
-        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-        required
-      />
-    </div>
-    <div>
-      <label for="description" class="block text-sm font-medium text-gray-700"
-        >description:</label
-      >
-      <textarea
-        type="textarea"
-        id="description"
-        name="description"
-        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-        required
-      ></textarea>
-    </div>
-    <div>
-        <label for="address" class="block text-sm font-medium text-gray-700"
-          >Address:</label>
-          <input
-        type="text"
-        id="address"
-        name="address"
-        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-        required
-      />
-        </div>
-        <div class="card border p-4 mb-4">            
-            <label for="crowdPattern" class="block text-sm font-medium text-gray-700"
-            >Crowd Pattern:</label>
-            <div>    
-            8 AM:
-            <select name="cards[][option]" class="select border p-2 mr-2">
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-            12 PM:
-            <select name="cards[][option]" class="select border p-2 mr-2">
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-
-            3 PM:
-            <select name="cards[][option]" class="select border p-2 mr-2">
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-      
-            5 PM:
-            <select name="cards[][option]" class="select border p-2 mr-2">
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-            </div>
-        </div>
-    <button
-      type="submit"
-      class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700"
+      >Name:</label
     >
-      Submit
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      required
+    />
+  </div>
+  <div>
+    <label for="image" class="block text-sm font-medium text-gray-700"
+      >Image:</label
+    >
+    <input
+      type="text"
+      id="image"
+      name="image"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      required
+    />
+  </div>
+  <div>
+    <label for="description" class="block text-sm font-medium text-gray-700"
+      >description:</label
+    >
+    <textarea
+      type="textarea"
+      id="description"
+      name="description"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      required
+    ></textarea>
+  </div>
+  <div>
+    <label for="address" class="block text-sm font-medium text-gray-700"
+      >Address:</label
+    >
+    <input
+      type="text"
+      id="address"
+      name="address"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      required
+    />
+  </div>
+  <div class="card border p-4 mb-4">
+    <label for="crowdPattern" class="block text-sm font-medium text-gray-700"
+      >Crowd Pattern:</label
+    >
+    <div>
+      8 AM:
+      <select name="cards[][option]" class="select border p-2 mr-2">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      12 PM:
+      <select name="cards[][option]" class="select border p-2 mr-2">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      3 PM:
+      <select name="cards[][option]" class="select border p-2 mr-2">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      5 PM:
+      <select name="cards[][option]" class="select border p-2 mr-2">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+
+    <div>
+      Busy Days:
+      <div>
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox1"
+          />
+          Monday</label
+        >
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox2"
+          />
+          Tuesday</label
+        >
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox3"
+          />
+          Wednesday</label
+        >
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox3"
+          />
+          Thursday</label
+        >
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox3"
+          />
+          Friday</label
+        >
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox3"
+          />
+          Saturday</label
+        >
+        <label class="mr-2"
+          ><input
+            type="checkbox"
+            name="cards[][checkboxes][]"
+            value="checkbox3"
+          />
+          Sunday</label
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="card border p-4 mb-4">
+    <div class="upcomingEventContainer" id="event-container">
+      <label
+        for="upcomingEvents"
+        class="block text-sm font-medium text-gray-700"
+      >
+        Upcoming Events:
+      </label>
+      <button
+        type="button"
+        id="add-event-button"
+        class="add-eventbutton bg-blue-500 text-white px-2 py-1 rounded"
+      >
+        Add Event
+      </button>
+      <div>
+        Date:
+        <input
+          type="datetime-local"
+          name="cards[][time]"
+          class="input border p-2 mr-2"
+          value=""
+        />
+        Event Details:
+        <input
+          type="text"
+          name="cards[][time]"
+          class="input border p-2 mr-2"
+          value=""
+        />
+        Event Location:
+        <input
+          type="text"
+          name="cards[][time]"
+          class="input border p-2 mr-2"
+          value=""
+        />
+        <button
+          type="button"
+          class="delete-event-button bg-red-500 text-white px-2 py-1 rounded"
+        >
+          Delete Event
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border p-4 mb-4">
+    <label for="darshanDetails" class="block text-sm font-medium text-gray-700">
+      Darshan Details:</label
+    >
+    <label for="Timing" class="block text-sm font-medium text-gray-700">
+      Timing:</label
+    >
+    <div>
+      <textarea name="cards[][time]" class="input border p-2 mr-2"></textarea>
+    </div>
+
+    <label for="Charges" class="block text-sm font-medium text-gray-700">
+      Darshan Charges:</label
+    >
+
+    <div id="darshanChargesContainer">
+      <button
+        type="button"
+        id="add-darshan-button"
+        class="add-darshanbutton bg-blue-500 text-white px-2 py-1 rounded"
+      >
+        Add Type
+      </button>
+      <div>
+        Type:
+        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        Amount:
+        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <button
+          type="button"
+          id="delete-darshan-button"
+          class="delete-darshan-button bg-red-500 text-white px-2 py-1 rounded"
+        >
+          Delete Type
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border p-4 mb-4" id="historyContainer">
+    <label for="history" class="block text-sm font-medium text-gray-700">
+      History:
+    </label>
+    Opened On:
+    <input type="date" name="cards[][time]" class="input border p-2 mr-2" />
+    builder:
+    <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    description:
+    <textarea name="cards[][time]" class="input border p-2 mr-2"></textarea>
+    backgroundImage:
+    <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+  </div>
+
+  <div class="card border p-4 mb-4" id="godContainer">
+    <label for="Gods" class="block text-xl font-medium text-gray-700">
+      God and Goddess:
+    </label>
+    <button
+      type="button"
+      class="add-gods-button bg-red-500 text-white px-2 py-1 rounded"
+      id="add-gods-button"
+    >
+      Add New God
     </button>
-  </form>
+    <div>
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <button
+        type="button"
+        class="delete-gods-button bg-red-500 text-white px-2 py-1 rounded"
+      >
+        Delete God
+      </button>
+    </div>
+  </div>
+
+  <div class="card border p-4 mb-4" id="informationContainer">
+    <label for="information" class="block text-xl font-medium text-gray-700">
+      information
+    </label>
+    <div>
+      openingHours:
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    </div>
+    <div>
+      Parking:
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    </div>
+    <div>
+      Mobile Info:
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    </div>
+    <div>
+      Website:
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    </div>
+    <div>
+      dos:
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    </div>
+    <div>
+      don't:
+      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    </div>
+    <div>
+      facilities:
+      <textarea name="cards[][time]" class="input border p-2 mr-2"></textarea>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+  >
+    Submit
+  </button>
 </form>

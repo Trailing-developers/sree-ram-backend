@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
           createContent.innerHTML = html;
           if (type === "darshan_widgets") {
             addWidgetItemHandler();
+          } else if (type === "temples") {
+            addUpcomingEventsHandler();
           } else {
             addDynamicItemHandler();
           }
@@ -202,5 +204,116 @@ document.addEventListener("DOMContentLoaded", function () {
         event.target.closest(".card").remove();
       }
     });
+  }
+
+  function addUpcomingEventsHandler() {
+    const addEventButton = document.getElementById("add-event-button");
+    const container = document.getElementById("event-container");
+
+    if (addEventButton && container) {
+      addEventButton.addEventListener("click", function () {
+        const newItemInput = `
+        <div class="flex items-center space-x-2">
+        <div>
+        Date:
+        <input
+          type="datetime-local"
+          name="cards[][time]"
+          class="input border p-2 mr-2"
+          value=""
+        />
+        Event Details:
+        <input
+          type="text"
+          name="cards[][time]"
+          class="input border p-2 mr-2"
+          value=""
+        />
+        Event Location:
+        <input
+          type="text"
+          name="cards[][time]"
+          class="input border p-2 mr-2"
+          value=""
+        />
+          <button
+            type="button"
+            class="delete-event-button bg-red-500 text-white px-2 py-1 rounded"
+          >
+            Delete Event
+          </button>
+        
+      </div>
+        </div>
+        `;
+
+        // Append the new input field to the container
+        container.insertAdjacentHTML("beforeend", newItemInput);
+      });
+
+      container.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete-event-button")) {
+          e.target.parentElement.remove();
+        }
+      });
+    }
+
+    const addDarshanButton = document.getElementById("add-darshan-button");
+    const darshanContainer = document.getElementById("darshanChargesContainer");
+
+    if (addDarshanButton && container) {
+      addDarshanButton.addEventListener("click", function () {
+        const newItemInput = `
+        <div>
+        Type:
+        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        Amount:
+        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <button
+          type="button"
+          id="delete-darshan-button"
+          class="delete-darshan-button bg-red-500 text-white px-2 py-1 rounded"
+        >
+          Delete Type
+        </button>
+      </div>`;
+
+        darshanContainer.insertAdjacentHTML("beforeend", newItemInput);
+      });
+
+      darshanContainer.addEventListener("click", function (e) {
+        console.log("clicked");
+        if (e.target.classList.contains("delete-darshan-button")) {
+          e.target.parentElement.remove();
+        }
+      });
+    }
+
+    const addGodButton = document.getElementById("add-gods-button");
+    const godsContainer = document.getElementById("godContainer");
+
+    if (addGodButton && godsContainer) {
+      addGodButton.addEventListener("click", function () {
+        const newItemInput = `
+        <div>
+        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <button
+          type="button"
+          class="delete-gods-button bg-red-500 text-white px-2 py-1 rounded"
+        >
+          Delete God
+        </button>
+      </div>`;
+
+        godsContainer.insertAdjacentHTML("beforeend", newItemInput);
+      });
+
+      godsContainer.addEventListener("click", function (e) {
+        console.log("clicked");
+        if (e.target.classList.contains("delete-gods-button")) {
+          e.target.parentElement.remove();
+        }
+      });
+    }
   }
 });
