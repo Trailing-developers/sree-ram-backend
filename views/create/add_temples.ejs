@@ -54,27 +54,27 @@
     >
     <div>
       8 AM:
-      <select name="cards[][option]" class="select border p-2 mr-2">
+      <select name="crowds[8AM]" class="select border p-2 mr-2">
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
       12 PM:
-      <select name="cards[][option]" class="select border p-2 mr-2">
+      <select name="crowds[12PM]" class="select border p-2 mr-2">
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
 
       3 PM:
-      <select name="cards[][option]" class="select border p-2 mr-2">
+      <select name="crowds[5PM]" class="select border p-2 mr-2">
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
 
       5 PM:
-      <select name="cards[][option]" class="select border p-2 mr-2">
+      <select name="crowds[8PM]" class="select border p-2 mr-2">
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
@@ -85,60 +85,25 @@
       Busy Days:
       <div>
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox1"
-          />
-          Monday</label
+          ><input type="checkbox" name="busyDay[monday]" /> Monday</label
         >
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox2"
-          />
-          Tuesday</label
+          ><input type="checkbox" name="busyDay[tuesday]" /> Tuesday</label
         >
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox3"
-          />
-          Wednesday</label
+          ><input type="checkbox" name="busyDay[wednesday]" /> Wednesday</label
         >
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox3"
-          />
-          Thursday</label
+          ><input type="checkbox" name="busyDay[thursday]" /> Thursday</label
         >
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox3"
-          />
-          Friday</label
+          ><input type="checkbox" name="busyDay[friday]" /> Friday</label
         >
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox3"
-          />
-          Saturday</label
+          ><input type="checkbox" name="busyDay[saturday]" /> Saturday</label
         >
         <label class="mr-2"
-          ><input
-            type="checkbox"
-            name="cards[][checkboxes][]"
-            value="checkbox3"
-          />
-          Sunday</label
+          ><input type="checkbox" name="busyDay[sunday]" /> Sunday</label
         >
       </div>
     </div>
@@ -163,21 +128,21 @@
         Date:
         <input
           type="datetime-local"
-          name="cards[][time]"
+          name="upcomingEvents[dateTime][]"
           class="input border p-2 mr-2"
           value=""
         />
         Event Details:
         <input
           type="text"
-          name="cards[][time]"
+          name="upcomingEvents[details][]"
           class="input border p-2 mr-2"
           value=""
         />
         Event Location:
         <input
           type="text"
-          name="cards[][time]"
+          name="upcomingEvents[location][]"
           class="input border p-2 mr-2"
           value=""
         />
@@ -199,7 +164,10 @@
       Timing:</label
     >
     <div>
-      <textarea name="cards[][time]" class="input border p-2 mr-2"></textarea>
+      <textarea
+        name="darshan[timings][]"
+        class="input border p-2 mr-2"
+      ></textarea>
     </div>
 
     <label for="Charges" class="block text-sm font-medium text-gray-700">
@@ -216,9 +184,23 @@
       </button>
       <div>
         Type:
-        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <input
+          type="text"
+          name="darshan[type][typeName][]"
+          class="input border p-2 mr-2"
+        />
         Amount:
-        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <input
+          type="text"
+          name="darshan[type][amount][]"
+          class="input border p-2 mr-2"
+        />
+        Timing:
+        <input
+          type="text"
+          name="darshan[type][timing][]"
+          class="input border p-2 mr-2"
+        />
         <button
           type="button"
           id="delete-darshan-button"
@@ -235,13 +217,20 @@
       History:
     </label>
     Opened On:
-    <input type="date" name="cards[][time]" class="input border p-2 mr-2" />
+    <input type="date" name="history[openedOn]" class="input border p-2 mr-2" />
     builder:
-    <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    <input type="text" name="history[builder]" class="input border p-2 mr-2" />
     description:
-    <textarea name="cards[][time]" class="input border p-2 mr-2"></textarea>
+    <textarea
+      name="history[description]"
+      class="input border p-2 mr-2"
+    ></textarea>
     backgroundImage:
-    <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+    <input
+      type="text"
+      name="history[backgroundImage]"
+      class="input border p-2 mr-2"
+    />
   </div>
 
   <div class="card border p-4 mb-4" id="godContainer">
@@ -250,13 +239,23 @@
     </label>
     <button
       type="button"
-      class="add-gods-button bg-red-500 text-white px-2 py-1 rounded"
+      class="add-gods-button bg-blue-500 text-white px-2 py-1 rounded"
       id="add-gods-button"
     >
       Add New God
     </button>
     <div>
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        id="suggestion-input"
+        name="godIds[]"
+        class="input border p-2 mr-2"
+        autocomplete="off"
+      />
+      <div
+        id="suggestion-box"
+        class="absolute bg-white border border-gray-300 w-full mt-1"
+      ></div>
       <button
         type="button"
         class="delete-gods-button bg-red-500 text-white px-2 py-1 rounded"
@@ -272,31 +271,58 @@
     </label>
     <div>
       openingHours:
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        name="information[openingHours]"
+        class="input border p-2 mr-2"
+      />
     </div>
     <div>
       Parking:
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        name="information[parking]"
+        class="input border p-2 mr-2"
+      />
     </div>
     <div>
       Mobile Info:
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        name="information[mobile]"
+        class="input border p-2 mr-2"
+      />
     </div>
     <div>
       Website:
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        name="information[website]"
+        class="input border p-2 mr-2"
+      />
     </div>
     <div>
       dos:
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        name="information[dos]"
+        class="input border p-2 mr-2"
+      />
     </div>
     <div>
       don't:
-      <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+      <input
+        type="text"
+        name="information[dont]"
+        class="input border p-2 mr-2"
+      />
     </div>
     <div>
       facilities:
-      <textarea name="cards[][time]" class="input border p-2 mr-2"></textarea>
+      <textarea
+        name="information[facilities]"
+        class="input border p-2 mr-2"
+      ></textarea>
     </div>
   </div>
 

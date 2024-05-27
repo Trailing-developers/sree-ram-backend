@@ -218,21 +218,21 @@ document.addEventListener("DOMContentLoaded", function () {
         Date:
         <input
           type="datetime-local"
-          name="cards[][time]"
+          name="upcomingEvents[dateTime][]"
           class="input border p-2 mr-2"
           value=""
         />
         Event Details:
         <input
           type="text"
-          name="cards[][time]"
+          name="upcomingEvents[details][]"
           class="input border p-2 mr-2"
           value=""
         />
         Event Location:
         <input
           type="text"
-          name="cards[][time]"
+          name="upcomingEvents[location][]"
           class="input border p-2 mr-2"
           value=""
         />
@@ -266,9 +266,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const newItemInput = `
         <div>
         Type:
-        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <input type="text" name="darshan[type][typeName][]" class="input border p-2 mr-2" />
         Amount:
-        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <input type="text" name="darshan[type][amount][]" class="input border p-2 mr-2" />
+        Timing:
+        <input type="text" name="darshan[type][timing][]" class="input border p-2 mr-2" />
         <button
           type="button"
           id="delete-darshan-button"
@@ -296,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addGodButton.addEventListener("click", function () {
         const newItemInput = `
         <div>
-        <input type="text" name="cards[][time]" class="input border p-2 mr-2" />
+        <input type="text" name="godIds[]" class="input border p-2 mr-2" />
         <button
           type="button"
           class="delete-gods-button bg-red-500 text-white px-2 py-1 rounded"

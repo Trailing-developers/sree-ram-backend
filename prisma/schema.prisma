@@ -28,3 +28,11 @@ model Widgets {
   data Json 
   @@unique([position, type])
 }
+
+model God {
+  id Int @id @default(autoincrement())
+  name String @unique
+  image String
+  description String
+  createdAt DateTime @default(now())
+}

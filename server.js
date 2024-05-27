@@ -11,6 +11,7 @@ const kathaRouter = require("./routes/katha_api");
 const mantraRouter = require("./routes/mantras");
 const widgetRouter = require("./routes/widgets");
 const templeRouter = require("./routes/temple");
+const godRouter = require("./routes/gods");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -35,7 +36,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", indexRouter);
-app.use("/api", [kathaRouter, mantraRouter, widgetRouter, templeRouter]);
+app.use("/api", [
+  kathaRouter,
+  mantraRouter,
+  widgetRouter,
+  templeRouter,
+  godRouter,
+]);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

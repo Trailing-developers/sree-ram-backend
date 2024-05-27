@@ -21,6 +21,7 @@ const createOption = (req, res) => {
     "darshan_banner",
     "darshan_widgets",
     "temples",
+    "gods",
   ];
   res.render("create", { types });
 };
@@ -63,6 +64,7 @@ const default_array_widgets = {
     },
   ],
 };
+
 async function getPageContent(type) {
   if (type === "banners") {
     const banners = await getHomeBanners();
