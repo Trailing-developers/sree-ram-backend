@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
             addWidgetItemHandler();
           } else if (type === "temples") {
             addUpcomingEventsHandler();
+            document
+              .querySelectorAll(".suggestion-input")
+              .forEach((inputField) => {
+                const suggestionBox = inputField.nextElementSibling;
+                suggestionHandler(inputField, suggestionBox);
+              });
           } else {
             addDynamicItemHandler();
           }
@@ -296,25 +302,88 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (addGodButton && godsContainer) {
       addGodButton.addEventListener("click", function () {
-        const newItemInput = `
-        <div>
-        <input type="text" name="godIds[]" class="input border p-2 mr-2" />
-        <button
-          type="button"
-          class="delete-gods-button bg-red-500 text-white px-2 py-1 rounded"
-        >
-          Delete God
-        </button>
-      </div>`;
+        const newInputDiv = document.createElement("div");
+        newInputDiv.classList.add("relative", "mb-4");
 
-        godsContainer.insertAdjacentHTML("beforeend", newItemInput);
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.name = "item";
+        newInput.classList.add("suggestion-input", "input", "border", "p-2");
+        newInput.autocomplete = "off";
+
+        const suggestionBox = document.createElement("div");
+        suggestionBox.classList.add(
+          "absolute",
+          "bg-white",
+          "border",
+          "border-gray-300",
+          "w-full",
+          "mt-1"
+        );
+
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add(
+          "bg-red-500",
+          "text-white",
+          "delete-gods-button",
+          "px-2",
+          "py-1",
+          "rounded",
+          "ml-2"
+        );
+        deleteButton.addEventListener("click", () => {
+          inputDiv.remove();
+        });
+
+        newInputDiv.appendChild(newInput);
+        newInputDiv.appendChild(suggestionBox);
+        newInputDiv.appendChild(deleteButton);
+
+        godsContainer.appendChild(newInputDiv);
+
+        suggestionHandler(newInput, suggestionBox);
       });
 
+      // document.querySelectorAll(".suggestion-input").forEach(suggestionHandler);
       godsContainer.addEventListener("click", function (e) {
-        console.log("clicked");
         if (e.target.classList.contains("delete-gods-button")) {
           e.target.parentElement.remove();
         }
+      });
+    }
+  }
+
+  function suggestionHandler(inputField, suggestionBox) {
+    if (inputField && suggestionBox) {
+      inputField.addEventListener("input", async () => {
+        console.log("input");
+        const query = inputField.value;
+        if (query.length < 2) {
+          suggestionBox.innerHTML = "";
+          return;
+        }
+
+        const response = await fetch(`api/gods/suggest?q=${query}`);
+        const suggestions = await response.json();
+
+        suggestionBox.innerHTML = "";
+        suggestions.data.forEach((item) => {
+          const suggestionItem = document.createElement("div");
+          suggestionItem.classList.add(
+            "suggestion-item",
+            "p-2",
+            "hover:bg-gray-200",
+            "cursor-pointer"
+          );
+          suggestionItem.textContent = item.name;
+          suggestionItem.addEventListener("click", () => {
+            inputField.value = item.name;
+            suggestionBox.innerHTML = "";
+          });
+          suggestionBox.appendChild(suggestionItem);
+        });
       });
     }
   }

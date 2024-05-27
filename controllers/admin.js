@@ -53,7 +53,7 @@ const default_array_widgets = {
   data: [
     {
       widgetTitle: null,
-      items: [
+      data: [
         {
           name: null,
           place: null,
@@ -68,11 +68,14 @@ const default_array_widgets = {
 async function getPageContent(type) {
   if (type === "banners") {
     const banners = await getHomeBanners();
+    if (!banners || banners == null) {
+      return default_array_banner;
+    }
     return banners;
   } else if (type === "home_calendar_banner") {
     const banners = await getHomeCalendarBanners();
     if (!banners || banners == null) {
-      return default_banners;
+      return default_array_banner;
     }
     return banners;
   } else if (type === "darshan_banner") {
