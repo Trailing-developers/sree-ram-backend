@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const newInput = document.createElement("input");
         newInput.type = "text";
-        newInput.name = "item";
+        newInput.name = "godIds[]";
         newInput.classList.add("suggestion-input", "input", "border", "p-2");
         newInput.autocomplete = "off";
 
@@ -353,12 +353,46 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+
+    suggestAddressHandler();
+  }
+
+  function suggestAddressHandler() {
+    const addressInput = document.getElementById("addressSearch");
+    const suggestionsList = document.getElementById("addressSuggestions");
+    const lat = document.getElementById("lat");
+    const lon = document.getElementById("lon");
+
+    if (addressInput && suggestionsList) {
+      addressInput.addEventListener("input", async () => {
+        const query = addressInput.value;
+        if (query.length >= 1) {
+          const response = await fetch(`/api/address/suggest?q=${query}`);
+          const results = await response.json();
+          suggestionsList.innerHTML = "";
+
+          results.data.forEach((result) => {
+            const li = document.createElement("li");
+            li.textContent = `${result.address1}, ${result.city}, ${result.state}`;
+            li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-200");
+            li.addEventListener("click", () => {
+              addressInput.value = result.id;
+              lat.value = result.latitude;
+              lon.value = result.longitude;
+              suggestionsList.innerHTML = "";
+            });
+            suggestionsList.appendChild(li);
+          });
+        } else {
+          suggestionsList.innerHTML = ""; // Clear suggestions if query is too short
+        }
+      });
+    }
   }
 
   function suggestionHandler(inputField, suggestionBox) {
     if (inputField && suggestionBox) {
       inputField.addEventListener("input", async () => {
-        console.log("input");
         const query = inputField.value;
         if (query.length < 2) {
           suggestionBox.innerHTML = "";
@@ -379,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function () {
           );
           suggestionItem.textContent = item.name;
           suggestionItem.addEventListener("click", () => {
-            inputField.value = item.name;
+            inputField.value = item.id;
             suggestionBox.innerHTML = "";
           });
           suggestionBox.appendChild(suggestionItem);

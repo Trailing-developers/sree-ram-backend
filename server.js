@@ -12,6 +12,7 @@ const mantraRouter = require("./routes/mantras");
 const widgetRouter = require("./routes/widgets");
 const templeRouter = require("./routes/temple");
 const godRouter = require("./routes/gods");
+const address = require("./routes/address");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -42,6 +43,7 @@ app.use("/api", [
   widgetRouter,
   templeRouter,
   godRouter,
+  address,
 ]);
 
 app.listen(PORT, () => {
