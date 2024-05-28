@@ -22,6 +22,7 @@ const createOption = (req, res) => {
     "darshan_widgets",
     "temples",
     "gods",
+    "address",
   ];
   res.render("create", { types });
 };

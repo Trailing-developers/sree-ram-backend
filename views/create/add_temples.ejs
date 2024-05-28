@@ -36,18 +36,44 @@
       required
     ></textarea>
   </div>
-  <div>
-    <label for="address" class="block text-sm font-medium text-gray-700"
-      >Address:</label
-    >
-    <input
-      type="text"
-      id="address"
-      name="address"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-      required
-    />
+  <div class="card border p-4 mb-4">
+    <div>
+      <label for="address" class="block text-sm font-medium text-gray-700"
+        >Address:</label
+      >
+      <input
+        type="text"
+        id="address"
+        name="address"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="lat_lon" class="block text-sm font-medium text-gray-700"
+        >Latitude:</label
+      >
+      <input
+        type="text"
+        id="lat"
+        name="place[lat]"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+      <label for="lat_lon" class="block text-sm font-medium text-gray-700"
+        >Longitute:</label
+      >
+      <input
+        type="text"
+        id="lon"
+        name="place[lon]"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+    </div>
   </div>
+
   <div class="card border p-4 mb-4">
     <label for="crowdPattern" class="block text-sm font-medium text-gray-700"
       >Crowd Pattern:</label

@@ -1,0 +1,188 @@
+<h2 class="text-xl font-semibold mb-2">Add Address</h2>
+<form action="/api/address" method="POST" class="space-y-4">
+    <div>
+      <label for="description" class="block text-sm font-medium text-gray-700"
+        >description:</label
+      >
+      <input
+        type="text"
+        id="description"
+        name="description"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+    </div>
+    <div>
+      <label for="address1" class="block text-sm font-medium text-gray-700"
+        >Address1:</label
+      >
+      <input
+        type="text"
+        id="address1"
+        name="address1"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        required
+      />
+    </div>
+    <div>
+        <label for="address2" class="block text-sm font-medium text-gray-700"
+          >Address2:</label
+        >
+        <input
+          type="text"
+          id="address2"
+          name="address2"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          
+        />
+      </div>
+      <div>
+        <label for="district" class="block text-sm font-medium text-gray-700"
+          >district:</label
+        >
+        <input
+          type="text"
+          id="district"
+          name="district"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          
+        />
+      </div>
+
+      <div>
+        <label for="city" class="block text-sm font-medium text-gray-700"
+          >City:</label
+        >
+        <input
+          type="text"
+          id="city"
+          name="city"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="state" class="block text-sm font-medium text-gray-700"
+          >state:</label
+        >
+        <input
+          type="text"
+          id="state"
+          name="state"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="isCityCenter" class="block text-sm font-medium text-gray-700"
+          >isCityCenter:</label
+        >
+        <input
+          type="checkbox"
+          id="isCityCenter"
+          name="isCityCenter"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="isBusStation" class="block text-sm font-medium text-gray-700"
+          >isBusStation:</label
+        >
+        <input
+          type="checkbox"
+          id="isBusStation"
+          name="isBusStation"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          
+        />
+      </div>
+
+      <div>
+        <label for="isTrainStation" class="block text-sm font-medium text-gray-700"
+          >isTrainStation:</label
+        >
+        <input
+          type="checkbox"
+          id="isTrainStation"
+          name="isTrainStation"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          
+        />
+      </div>
+
+      <div>
+        <label for="isAirport" class="block text-sm font-medium text-gray-700"
+          >isAirport:</label
+        >
+        <input
+          type="checkbox"
+          id="isAirport"
+          name="isAirport"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          
+        />
+      </div>
+
+      <div>
+        <label for="country" class="block text-sm font-medium text-gray-700"
+          >Country:</label
+        >
+        <input
+          type="text"
+          id="country"
+          name="country"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="latitude" class="block text-sm font-medium text-gray-700"
+          >Latitude:</label
+        >
+        <input
+          type="text"
+          id="latitude"
+          name="latitude"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="longitude" class="block text-sm font-medium text-gray-700"
+          >Longitude:</label
+        >
+        <input
+          type="text"
+          id="longitude"
+          name="longitude"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="zip" class="block text-sm font-medium text-gray-700"
+          >Zip:</label
+        >
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+    <button
+      type="submit"
+      class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >
+      Submit
+    </button>
+  </form>
+</form>
