@@ -6,6 +6,19 @@ const getGodById = async (id) => {
     where: {
       id: parseInt(id),
     },
+    include: {
+      temple: {
+        include: {
+          temple: {
+            select: {
+              name: true,
+              id: true,
+              image: true,
+            },
+          },
+        },
+      },
+    },
   });
   return allGods;
 };

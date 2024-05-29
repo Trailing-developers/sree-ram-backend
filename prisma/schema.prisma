@@ -36,6 +36,7 @@ model God {
   image       String
   description String
   createdAt   DateTime @default(now())
+  temple      GodTempleMapping[]
 }
 
 model Address {
@@ -82,12 +83,17 @@ model Temple {
   upcomingEvents Json
   darshanTimings String
   darshanTypes   Json
-  gods           Json
+  gods           GodTempleMapping[]
   information    Json
   history        Json
   createdAt      DateTime @default(now())
 }
 
-model GodEntityMapping {
-  id Int @id @default(autoincrement())
+model GodTempleMapping {
+  temple Temple @relation(fields: [templeId], references: [id])
+  templeId Int
+  god God @relation(fields: [godId], references: [id])
+  godId Int
+  
+  @@id([godId, templeId])
 }
