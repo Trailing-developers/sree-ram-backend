@@ -1,0 +1,98 @@
+<h2 class="text-xl font-semibold mb-2">Add Events</h2>
+
+<form action="/api/event" method="POST" class="space-y-4">
+      <div id="itemContainer" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Name:</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            />
+          </div>
+          <div>
+            <label for="eventType" class="block text-sm font-medium text-gray-700"
+              >Event Type:</label
+            >
+            <input
+              type="text"
+              id="eventType"
+              name="eventType"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            />
+          </div>
+          <div>
+            <label for="image" class="block text-sm font-medium text-gray-700"
+              >Image:</label
+            >
+            <input
+              type="text"
+              id="image"
+              name="image"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+          <div>
+            <label for="description" class="block text-sm font-medium text-gray-700"
+              >description:</label
+            >
+            <textarea
+              type="text"
+              id="description"
+              name="description"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="start" class="block text-sm font-medium text-gray-700"
+              >start:</label
+            >
+            <input
+              type="datetime-local"
+              id="start"
+              name="start"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+          </div>
+
+          <div>
+            <label for="end" class="block text-sm font-medium text-gray-700"
+              >end:</label
+            >
+            <input
+              type="datetime-local"
+              id="end"
+              name="end"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+          </div>
+
+          <div>
+            <label for="location" class="block text-sm font-medium text-gray-700"
+              >location:</label
+            >
+            <input
+              type="text"
+              id="addressSearch"
+              name="location"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+            <ul id="addressSuggestions" class="border rounded mt-2 bg-white"></ul>
+          </div>
+
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        Submit
+      </button>
+  </form>
+</form>

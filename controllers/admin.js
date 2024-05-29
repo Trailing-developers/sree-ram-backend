@@ -23,6 +23,7 @@ const createOption = (req, res) => {
     "temples",
     "gods",
     "address",
+    "events",
   ];
   res.render("create", { types });
 };

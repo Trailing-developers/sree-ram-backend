@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const suggestionBox = inputField.nextElementSibling;
                 suggestionHandler(inputField, suggestionBox);
               });
+          } else if (type === "events") {
+            suggestAddressHandler();
           } else {
             addDynamicItemHandler();
           }
@@ -213,56 +215,56 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addUpcomingEventsHandler() {
-    const addEventButton = document.getElementById("add-event-button");
-    const container = document.getElementById("event-container");
+    // const addEventButton = document.getElementById("add-event-button");
+    // const container = document.getElementById("event-container");
 
-    if (addEventButton && container) {
-      addEventButton.addEventListener("click", function () {
-        const newItemInput = `
-        <div class="flex items-center space-x-2">
-        <div>
-        Date:
-        <input
-          type="datetime-local"
-          name="upcomingEvents[dateTime][]"
-          class="input border p-2 mr-2"
-          value=""
-        />
-        Event Details:
-        <input
-          type="text"
-          name="upcomingEvents[details][]"
-          class="input border p-2 mr-2"
-          value=""
-        />
-        Event Location:
-        <input
-          type="text"
-          name="upcomingEvents[location][]"
-          class="input border p-2 mr-2"
-          value=""
-        />
-          <button
-            type="button"
-            class="delete-event-button bg-red-500 text-white px-2 py-1 rounded"
-          >
-            Delete Event
-          </button>
-        
-      </div>
-        </div>
-        `;
+    // if (addEventButton && container) {
+    //   addEventButton.addEventListener("click", function () {
+    //     const newItemInput = `
+    //     <div class="flex items-center space-x-2">
+    //     <div>
+    //     Date:
+    //     <input
+    //       type="datetime-local"
+    //       name="upcomingEvents[dateTime][]"
+    //       class="input border p-2 mr-2"
+    //       value=""
+    //     />
+    //     Event Details:
+    //     <input
+    //       type="text"
+    //       name="upcomingEvents[details][]"
+    //       class="input border p-2 mr-2"
+    //       value=""
+    //     />
+    //     Event Location:
+    //     <input
+    //       type="text"
+    //       name="upcomingEvents[location][]"
+    //       class="input border p-2 mr-2"
+    //       value=""
+    //     />
+    //       <button
+    //         type="button"
+    //         class="delete-event-button bg-red-500 text-white px-2 py-1 rounded"
+    //       >
+    //         Delete Event
+    //       </button>
 
-        // Append the new input field to the container
-        container.insertAdjacentHTML("beforeend", newItemInput);
-      });
+    //   </div>
+    //     </div>
+    //     `;
 
-      container.addEventListener("click", function (e) {
-        if (e.target.classList.contains("delete-event-button")) {
-          e.target.parentElement.remove();
-        }
-      });
-    }
+    //     // Append the new input field to the container
+    //     container.insertAdjacentHTML("beforeend", newItemInput);
+    //   });
+
+    //   container.addEventListener("click", function (e) {
+    //     if (e.target.classList.contains("delete-event-button")) {
+    //       e.target.parentElement.remove();
+    //     }
+    //   });
+    // }
 
     const addDarshanButton = document.getElementById("add-darshan-button");
     const darshanContainer = document.getElementById("darshanChargesContainer");
@@ -377,8 +379,10 @@ document.addEventListener("DOMContentLoaded", function () {
             li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-200");
             li.addEventListener("click", () => {
               addressInput.value = result.id;
-              lat.value = result.latitude;
-              lon.value = result.longitude;
+              if (lat && lon) {
+                lat.value = result.latitude;
+                lon.value = result.longitude;
+              }
               suggestionsList.innerHTML = "";
             });
             suggestionsList.appendChild(li);

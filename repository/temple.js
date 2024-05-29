@@ -40,7 +40,11 @@ const addTemple = async (body) => {
       name: body.name,
       description: body.description,
       image: body.image,
-      addressId: parseInt(body.address),
+      address: {
+        connect: {
+          id: parseInt(body.addressId),
+        },
+      },
       latitude: body.place.lat,
       longitude: body.place.lon,
       crowded: body.crowds,
@@ -53,9 +57,8 @@ const addTemple = async (body) => {
         saturday: body.busyDay.saturday == "on",
         sunday: body.busyDay.sunday == "on",
       },
-      upcomingEvents: body.upcomingEvents,
       darshanTimings: body.darshan.timings[0],
-      darshanTypes: body.darshan.type,
+      darshanTypes: body.darshanTypes,
       history: body.history,
       gods: {
         create: body.godIds.map((godId) => ({

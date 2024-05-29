@@ -31,11 +31,11 @@ model Widgets {
 }
 
 model God {
-  id          Int      @id @default(autoincrement())
-  name        String   @unique
+  id          Int                @id @default(autoincrement())
+  name        String             @unique
   image       String
   description String
-  createdAt   DateTime @default(now())
+  createdAt   DateTime           @default(now())
   temple      GodTempleMapping[]
 }
 
@@ -57,6 +57,7 @@ model Address {
   zip            String
   createdAt      DateTime @default(now())
   temple         Temple[]
+  event          Event[]
 }
 
 model Media {
@@ -64,36 +65,48 @@ model Media {
   name      String
   entityId  Int
   media     String
+  entityType String
   isVideo   Boolean
   isVisible Boolean
   createdAt DateTime @default(now())
 }
 
 model Temple {
-  id             Int      @id @default(autoincrement())
+  id             Int                @id @default(autoincrement())
   name           String
   description    String
   image          String
   addressId      Int
-  address        Address? @relation(fields: [addressId], references: [id])
+  address        Address?           @relation(fields: [addressId], references: [id])
   latitude       String
   longitude      String
   crowded        Json
   busyDays       Json
-  upcomingEvents Json
   darshanTimings String
   darshanTypes   Json
   gods           GodTempleMapping[]
   information    Json
   history        Json
-  createdAt      DateTime @default(now())
+  createdAt      DateTime           @default(now())
 }
 
 model GodTempleMapping {
-  temple Temple @relation(fields: [templeId], references: [id])
+  temple   Temple @relation(fields: [templeId], references: [id])
   templeId Int
-  god God @relation(fields: [godId], references: [id])
-  godId Int
-  
+  god      God    @relation(fields: [godId], references: [id])
+  godId    Int
+
   @@id([godId, templeId])
+}
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  image       String
+  start       DateTime
+  end         DateTime
+  eventType   String
+  locationId  Int
+  location    Address? @relation(fields: [locationId], references: [id])
 }
