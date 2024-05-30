@@ -110,3 +110,12 @@ model Event {
   locationId  Int
   location    Address? @relation(fields: [locationId], references: [id])
 }
+
+model Katha {
+  id           Int      @id @default(autoincrement())
+  title        String
+  image        String
+  content      Json  @default("[]")  
+  createdAt DateTime @default(now())
+}
+
