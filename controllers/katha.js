@@ -6,6 +6,7 @@ const getKathaList = (req, res) => {
       res.json(katha);
     })
     .catch((err) => {
+      console.log(err);
       res.status(500).json({ message: err.message });
     });
 };
@@ -16,9 +17,9 @@ const createKatha = (req, res) => {
   console.log(lines);
   const response = addKatha({ title, lines, image });
   res.json({ message: "Katha created successfully." });
-}
-
-module.exports = {
-  getKathaList, createKatha
 };
 
+module.exports = {
+  getKathaList,
+  createKatha,
+};
