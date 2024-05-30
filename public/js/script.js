@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const addDarshanButton = document.getElementById("add-darshan-button");
     const darshanContainer = document.getElementById("darshanChargesContainer");
 
-    if (addDarshanButton && container) {
+    if (addDarshanButton && darshanContainer) {
       addDarshanButton.addEventListener("click", function () {
         const newItemInput = `
         <div>

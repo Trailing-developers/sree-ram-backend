@@ -40,11 +40,7 @@ const addTemple = async (body) => {
       name: body.name,
       description: body.description,
       image: body.image,
-      address: {
-        connect: {
-          id: parseInt(body.addressId),
-        },
-      },
+      addressId: parseInt(body.address),
       latitude: body.place.lat,
       longitude: body.place.lon,
       crowded: body.crowds,
