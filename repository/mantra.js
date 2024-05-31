@@ -1,23 +1,14 @@
 const prisma = require("../prisma/client");
 
 const getAllMantras = async () => {
-  const mantras = await prisma.mantra.findMany();
-  return mantras;
-};
-
-const addMantra = async (body) => {
-  const { title, lines, image } = body;
-  const mantra = await prisma.mantra.create({
-    data: {
-      title: title,
-      content: lines,
-      image: image,
+  const mantras = await prisma.katha.findMany({
+    where: {
+      type: "mantra",
     },
   });
-  return mantra;
+  return mantras;
 };
 
 module.exports = {
   getAllMantras,
-  addMantra,
 };

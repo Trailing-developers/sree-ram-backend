@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const { getMantras, createMantra } = require("../controllers/mantra");
+const { getMantras } = require("../controllers/mantra");
 
-router.get("/mantras", getMantras).post("/mantra", createMantra);
+router.get("/mantras", getMantras);
 
 module.exports = router;
