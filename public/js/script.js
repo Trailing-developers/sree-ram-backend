@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
               });
           } else if (type === "events") {
             suggestAddressHandler();
+          } else if (type === "katha") {
+            addGodHandler();
+            document
+              .querySelectorAll(".suggestion-input")
+              .forEach((inputField) => {
+                const suggestionBox = inputField.nextElementSibling;
+                suggestionHandler(inputField, suggestionBox);
+              });
           } else {
             addDynamicItemHandler();
           }
@@ -299,11 +307,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
+    addGodHandler();
+    suggestAddressHandler();
+  }
+
+  function addGodHandler() {
     const addGodButton = document.getElementById("add-gods-button");
     const godsContainer = document.getElementById("godContainer");
 
     if (addGodButton && godsContainer) {
       addGodButton.addEventListener("click", function () {
+        console.log("clicked");
         const newInputDiv = document.createElement("div");
         newInputDiv.classList.add("relative", "mb-4");
 
@@ -355,8 +369,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-
-    suggestAddressHandler();
   }
 
   function suggestAddressHandler() {
@@ -398,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (inputField && suggestionBox) {
       inputField.addEventListener("input", async () => {
         const query = inputField.value;
-        if (query.length < 2) {
+        if (query.length < 1) {
           suggestionBox.innerHTML = "";
           return;
         }

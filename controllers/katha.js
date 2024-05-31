@@ -1,7 +1,20 @@
 const data = require("../mocks/index");
-const { addKatha, getAllKathas } = require("../repository/katha");
+const { addKatha, getAllKathas, getKathaById } = require("../repository/katha");
 const getKathaList = (req, res) => {
-  getAllKathas()
+  const { type } = req.params;
+  getAllKathas(type)
+    .then((katha) => {
+      res.json(katha);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ message: err.message });
+    });
+};
+
+const getKathaPage = (req, res) => {
+  const { id } = req.params;
+  getKathaById(id)
     .then((katha) => {
       res.json(katha);
     })
@@ -12,14 +25,14 @@ const getKathaList = (req, res) => {
 };
 
 const createKatha = (req, res) => {
-  const { title, content, image } = req.body;
-  const lines = content.split(",");
-  console.log(lines);
-  const response = addKatha({ title, lines, image });
-  res.json({ message: "Katha created successfully." });
+  const body = req.body;
+  body.content = body.content.split(",");
+  const response = addKatha(body);
+  res.json({ message: body });
 };
 
 module.exports = {
   getKathaList,
   createKatha,
+  getKathaPage,
 };

@@ -1,25 +1,97 @@
-
 <h2 class="text-xl font-semibold mb-2">Add Katha</h2>
 
 <form action="/api/katha" method="POST" class="space-y-4">
-    <div id="itemContainer" class="space-y-4">
-        <div class="item space-y-4">
-            <div>
-                <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
-                <input type="text" id="title" name="title" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg" required />
-            </div>
+  <div id="itemContainer" class="space-y-4">
+    <div class="item space-y-4">
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700"
+          >Title</label
+        >
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+          required
+        />
+      </div>
 
-            <div>
-                <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
-                <input type="text" id="image" name="image" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg" required />
-            </div>
-            <div>
-                <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
-                <input type="text" id="content" name="content" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg" />
-            </div>
+      <div>
+        <label for="image" class="block text-sm font-medium text-gray-700"
+          >Image</label
+        >
+        <input
+          type="text"
+          id="image"
+          name="image"
+          class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+          required
+        />
+      </div>
+      <div>
+        <label for="type" class="block text-sm font-medium text-gray-700"
+          >Type</label
+        >
+        <input
+          type="text"
+          id="type"
+          name="type"
+          class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+          required
+        />
+      </div>
+
+      <div class="card border p-4 mb-4" id="godContainer">
+        <label for="Gods" class="block text-xl font-medium text-gray-700">
+          God and Goddess:
+        </label>
+        <button
+          type="button"
+          class="add-gods-button bg-blue-500 text-white px-2 py-1 rounded"
+          id="add-gods-button"
+        >
+          Add
+        </button>
+        <div class="relative mb-4">
+          <br />
+          <input
+            type="text"
+            id="suggestion-input"
+            name="godIds[]"
+            class="suggestion-input input border p-2 mr-2"
+            autocomplete="off"
+          />
+          <div
+            id="suggestion-box"
+            class="absolute bg-white border border-gray-300 w-full mt-1"
+          ></div>
+          <button
+            type="button"
+            class="delete-gods-button bg-red-500 text-white px-2 py-1 rounded"
+          >
+            Delete
+          </button>
         </div>
-    </div>
-   
-    <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md">Submit</button>
-</form>
+      </div>
 
+      <div>
+        <label for="content" class="block text-sm font-medium text-gray-700"
+          >Content</label
+        >
+        <input
+          type="text"
+          id="content"
+          name="content"
+          class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+        />
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-blue-600 text-white py-2 px-4 rounded-md"
+  >
+    Submit
+  </button>
+</form>
