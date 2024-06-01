@@ -55,16 +55,17 @@ model Address {
 }
 
 model Media {
-  id         Int     @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   name       String
   media      String
   entityType String
-  isVideo    Boolean @default(false)
-  isVisible  Boolean @default(false)
+  isVideo    Boolean  @default(false)
+  isVisible  Boolean  @default(false)
+  tabs       String[] @default(["photos"])
   templeId   Int?
-  temple     Temple? @relation(fields: [templeId], references: [id])
+  temple     Temple?  @relation(fields: [templeId], references: [id])
   godId      Int?
-  god        God?    @relation(fields: [godId], references: [id])
+  god        God?     @relation(fields: [godId], references: [id])
 
   createdAt DateTime @default(now())
 }

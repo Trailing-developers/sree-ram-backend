@@ -96,6 +96,7 @@ function createMediaBody(items) {
       templeId: parseInt(items.entityId[i]),
       media: items.media[i],
       entityType: "temple",
+      tabs: items.tab[i].split(","),
     });
   }
   return medias;
