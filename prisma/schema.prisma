@@ -30,7 +30,7 @@ model God {
   createdAt   DateTime           @default(now())
   temple      GodTempleMapping[]
   kathas      GodKathaMapping[]
-  medias      MediaGodMapping[]
+  medias      Media[]
 }
 
 model Address {
@@ -55,17 +55,18 @@ model Address {
 }
 
 model Media {
-  id         Int               @id @default(autoincrement())
+  id         Int     @id @default(autoincrement())
   name       String
-  entityId   Int
   media      String
   entityType String
-  isVideo    Boolean
-  isVisible  Boolean
-  createdAt  DateTime          @default(now())
-  gods       MediaGodMapping[]
-  templeId   Int
-  temple     Temple            @relation(fields: [templeId], references: [id])
+  isVideo    Boolean @default(false)
+  isVisible  Boolean @default(false)
+  templeId   Int?
+  temple     Temple? @relation(fields: [templeId], references: [id])
+  godId      Int?
+  god        God?    @relation(fields: [godId], references: [id])
+
+  createdAt DateTime @default(now())
 }
 
 model Temple {
@@ -84,7 +85,7 @@ model Temple {
   gods           GodTempleMapping[]
   information    Json
   history        Json
-  media          Media[]
+  medias         Media[]
   createdAt      DateTime           @default(now())
 }
 
@@ -126,13 +127,4 @@ model GodKathaMapping {
   kathaId Int
 
   @@id([godId, kathaId])
-}
-
-model MediaGodMapping {
-  media   Media @relation(fields: [mediaId], references: [id])
-  mediaId Int
-  god     God   @relation(fields: [godId], references: [id])
-  godId   Int
-
-  @@id([mediaId, godId])
 }

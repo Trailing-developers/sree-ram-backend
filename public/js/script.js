@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 const suggestionBox = inputField.nextElementSibling;
                 suggestionHandler(inputField, suggestionBox);
               });
+          } else if (type === "media_temple") {
+            addMediaHandler();
+            document
+              .querySelectorAll(".suggestion-input")
+              .forEach((inputField) => {
+                const suggestionBox = inputField.nextElementSibling;
+                suggestionTempleHandler(inputField, suggestionBox);
+              });
           } else {
             addDynamicItemHandler();
           }
@@ -317,7 +325,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (addGodButton && godsContainer) {
       addGodButton.addEventListener("click", function () {
-        console.log("clicked");
         const newInputDiv = document.createElement("div");
         newInputDiv.classList.add("relative", "mb-4");
 
@@ -371,6 +378,79 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function addMediaHandler() {
+    const addMediaButton = document.getElementById("addItemButton");
+    const mediaContainer = document.getElementById("itemContainer");
+
+    if (addMediaButton && mediaContainer) {
+      addMediaButton.addEventListener("click", function () {
+        const newInputDiv = document.createElement("div");
+        newInputDiv.classList.add("relative", "mb-4");
+
+        const newInputMedia = document.createElement("input");
+        newInputMedia.type = "text";
+        newInputMedia.name = "media[]";
+        newInputMedia.classList.add("input", "border", "p-2");
+        newInputMedia.autocomplete = "off";
+
+        const newInput1 = document.createElement("input");
+        newInput1.type = "text";
+        newInput1.name = "name[]";
+        newInput1.classList.add("input", "border", "p-2");
+        newInput1.autocomplete = "off";
+
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.name = "entityId[]";
+        newInput.classList.add("suggestion-input", "input", "border", "p-2");
+        newInput.autocomplete = "off";
+
+        const suggestionBox = document.createElement("div");
+        suggestionBox.classList.add(
+          "absolute",
+          "bg-white",
+          "border",
+          "border-gray-300",
+          "w-full",
+          "mt-1"
+        );
+
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add(
+          "bg-red-500",
+          "text-white",
+          "delete-gods-button",
+          "px-2",
+          "py-1",
+          "rounded",
+          "ml-2"
+        );
+        deleteButton.addEventListener("click", () => {
+          inputDiv.remove();
+        });
+
+        newInputDiv.appendChild(newInput1);
+        newInputDiv.appendChild(newInput);
+        newInputDiv.appendChild(suggestionBox);
+        newInputDiv.appendChild(newInputMedia);
+        newInputDiv.appendChild(deleteButton);
+
+        mediaContainer.appendChild(newInputDiv);
+
+        suggestionTempleHandler(newInput, suggestionBox);
+      });
+
+      // document.querySelectorAll(".suggestion-input").forEach(suggestionHandler);
+      mediaContainer.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete-gods-button")) {
+          e.target.parentElement.remove();
+        }
+      });
+    }
+  }
+
   function suggestAddressHandler() {
     const addressInput = document.getElementById("addressSearch");
     const suggestionsList = document.getElementById("addressSuggestions");
@@ -416,6 +496,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const response = await fetch(`api/gods/suggest?q=${query}`);
+        const suggestions = await response.json();
+
+        suggestionBox.innerHTML = "";
+        suggestions.data.forEach((item) => {
+          const suggestionItem = document.createElement("div");
+          suggestionItem.classList.add(
+            "suggestion-item",
+            "p-2",
+            "hover:bg-gray-200",
+            "cursor-pointer"
+          );
+          suggestionItem.textContent = item.name;
+          suggestionItem.addEventListener("click", () => {
+            inputField.value = item.id;
+            suggestionBox.innerHTML = "";
+          });
+          suggestionBox.appendChild(suggestionItem);
+        });
+      });
+    }
+  }
+
+  function suggestionTempleHandler(inputField, suggestionBox) {
+    if (inputField && suggestionBox) {
+      inputField.addEventListener("input", async () => {
+        const query = inputField.value;
+        if (query.length < 1) {
+          suggestionBox.innerHTML = "";
+          return;
+        }
+
+        const response = await fetch(`api/temple/suggest?q=${query}`);
         const suggestions = await response.json();
 
         suggestionBox.innerHTML = "";

@@ -1,4 +1,10 @@
-const { addTemple, getTempleById } = require("../repository/temple");
+const {
+  addTemple,
+  getTempleById,
+  getTempleSuggestions,
+  addMedia,
+  findTempleMedia,
+} = require("../repository/temple");
 
 const createTemple = (req, res) => {
   const items = req.body;
@@ -42,7 +48,63 @@ const createDarshanTypes = (types) => {
   return darshanTypes;
 };
 
+const getTempleSuggestion = (req, res) => {
+  const query = req.query.q;
+  getTempleSuggestions(query).then((temples) => {
+    res.json({
+      status: "success",
+      data: temples,
+    });
+  });
+};
+
+const addTempleMedia = (req, res) => {
+  const bb = createMediaBody(req.body);
+  addMedia(bb)
+    .then((resp) => {
+      res.json({
+        status: "success",
+        data: resp,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json({
+        status: "failed",
+        data: err,
+      });
+    });
+};
+
+const findMediaByTempleId = (req, res) => {
+  const { templeId } = req.params;
+  findTempleMedia(templeId)
+    .then((resp) => {
+      res.json({ status: "success", data: resp });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json({ status: "failed", message: err });
+    });
+};
+
+function createMediaBody(items) {
+  const medias = [];
+  for (let i = 0; i < items.name.length; i++) {
+    medias.push({
+      name: items.name[i],
+      templeId: parseInt(items.entityId[i]),
+      media: items.media[i],
+      entityType: "temple",
+    });
+  }
+  return medias;
+}
+
 module.exports = {
   createTemple,
+  addTempleMedia,
   getTemple,
+  getTempleSuggestion,
+  findMediaByTempleId,
 };

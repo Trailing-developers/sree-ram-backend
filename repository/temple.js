@@ -34,6 +34,37 @@ const getTempleById = async (id) => {
   return temple;
 };
 
+const getTempleSuggestions = async (query) => {
+  const allTemples = await prisma.temple.findMany({
+    where: {
+      name: {
+        contains: query,
+        mode: "insensitive",
+      },
+    },
+    take: 10,
+  });
+  return allTemples;
+};
+
+const addMedia = async (body) => {
+  const createMedias = await prisma.media.createMany({
+    data: body,
+    skipDuplicates: true,
+  });
+  return createMedias;
+};
+
+const findTempleMedia = async (id) => {
+  const createMedias = await prisma.media.findMany({
+    where: {
+      templeId: parseInt(id),
+      entityType: "temple",
+    },
+  });
+  return createMedias;
+};
+
 const addTemple = async (body) => {
   const temple = await prisma.temple.create({
     data: {
@@ -69,5 +100,8 @@ const addTemple = async (body) => {
 
 module.exports = {
   getTempleById,
+  getTempleSuggestions,
   addTemple,
+  addMedia,
+  findTempleMedia,
 };

@@ -24,6 +24,7 @@ const createOption = (req, res) => {
     "gods",
     "address",
     "events",
+    "media_temple",
   ];
   res.render("create", { types });
 };
