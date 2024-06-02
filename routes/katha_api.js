@@ -13,7 +13,7 @@ const {
 router
   .get("/kathas/type/:type", getKathaList)
   .post("/katha/media", addKathaMedia)
-  .get("/katha/media/:kathaId", findMediaByKathaId)
+  .get("/media/katha/:kathaId", findMediaByKathaId)
   .get("/katha/suggest", getKathaSuggestion)
   .get("/katha/:id", getKathaPage)
   .post("/katha", createKatha);
