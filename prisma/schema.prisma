@@ -66,6 +66,8 @@ model Media {
   temple     Temple?  @relation(fields: [templeId], references: [id])
   godId      Int?
   god        God?     @relation(fields: [godId], references: [id])
+  kathaId    Int?
+  katha      Katha?   @relation(fields: [kathaId], references: [id])
 
   createdAt DateTime @default(now())
 }
@@ -117,6 +119,7 @@ model Katha {
   image     String
   type      String
   gods      GodKathaMapping[]
+  medias    Media[]
   content   Json              @default("[]")
   createdAt DateTime          @default(now())
 }

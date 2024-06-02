@@ -1,0 +1,89 @@
+<h2 class="text-xl font-semibold mb-2">Add Media Temple</h2>
+
+<form action="/api/katha/media" method="POST" class="space-y-4">
+  <div id="itemContainer" class="space-y-4">
+    <div class="flex items-center space-x-2">
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700"
+          >Name:</label
+        >
+        <input
+          type="text"
+          id="name"
+          name="name[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="tab" class="block text-sm font-medium text-gray-700"
+          >Tab:</label
+        >
+        <input
+          type="text"
+          id="tab"
+          name="tab[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="entityId" class="block text-sm font-medium text-gray-700"
+          >EntityId:</label
+        >
+        <!-- <input
+              type="text"
+              id="entityId"
+              name="entityId"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            /> -->
+        <input
+          type="text"
+          id="suggestion-input"
+          name="entityId[]"
+          class="suggestion-input input border p-2 mr-2"
+          autocomplete="off"
+        />
+        <div
+          id="suggestion-box"
+          class="absolute bg-white border border-gray-300 w-full mt-1"
+        ></div>
+      </div>
+      <div>
+        <label for="media" class="block text-sm font-medium text-gray-700"
+          >Media:</label
+        >
+        <input
+          type="text"
+          id="media"
+          name="media[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <button
+        type="button"
+        class="delete-button bg-red-500 text-white px-2 py-1 rounded"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+  <button
+    type="button"
+    id="addItemButton"
+    class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600"
+  >
+    Add Item
+  </button>
+  <button
+    type="submit"
+    class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+  >
+    Submit
+  </button>
+</form>

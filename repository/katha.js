@@ -25,6 +25,27 @@ const getKathaById = async (id) => {
   return katha;
 };
 
+const addMedia = async (body) => {
+  const createMedias = await prisma.media.createMany({
+    data: body,
+    skipDuplicates: true,
+  });
+  return createMedias;
+};
+
+const getKathaSuggestions = async (query) => {
+  const allKathas = await prisma.katha.findMany({
+    where: {
+      title: {
+        contains: query,
+        mode: "insensitive",
+      },
+    },
+    take: 10,
+  });
+  return allKathas;
+};
+
 const addKatha = async (body) => {
   const katha = await prisma.katha.create({
     data: {
@@ -42,8 +63,21 @@ const addKatha = async (body) => {
   return katha;
 };
 
+const findKathaMedia = async (id) => {
+  const medias = await prisma.media.findMany({
+    where: {
+      kathaId: parseInt(id),
+      entityType: "katha",
+    },
+  });
+  return medias;
+};
+
 module.exports = {
   getAllKathas,
   getKathaById,
+  getKathaSuggestions,
+  findKathaMedia,
   addKatha,
+  addMedia,
 };

@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const suggestionBox = inputField.nextElementSibling;
                 suggestionHandler(inputField, suggestionBox);
               });
-          } else if (type === "media_temple") {
-            addMediaHandler();
+          } else if (type === "media_temple" || type === "media_katha") {
+            addMediaHandler(type === "media_temple");
             document
               .querySelectorAll(".suggestion-input")
               .forEach((inputField) => {
@@ -378,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function addMediaHandler() {
+  function addMediaHandler(isTemple) {
     const addMediaButton = document.getElementById("addItemButton");
     const mediaContainer = document.getElementById("itemContainer");
 
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         mediaContainer.appendChild(newInputDiv);
 
-        suggestionTempleHandler(newInput, suggestionBox);
+        suggestionTempleHandler(newInput, suggestionBox, isTemple);
       });
 
       // document.querySelectorAll(".suggestion-input").forEach(suggestionHandler);
@@ -525,7 +525,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function suggestionTempleHandler(inputField, suggestionBox) {
+  function suggestionTempleHandler(inputField, suggestionBox, isTemple) {
     if (inputField && suggestionBox) {
       inputField.addEventListener("input", async () => {
         const query = inputField.value;
@@ -533,8 +533,11 @@ document.addEventListener("DOMContentLoaded", function () {
           suggestionBox.innerHTML = "";
           return;
         }
+        const url = isTemple
+          ? `api/temple/suggest?q=${query}`
+          : `api/katha/suggest?q=${query}`;
 
-        const response = await fetch(`api/temple/suggest?q=${query}`);
+        const response = await fetch(url);
         const suggestions = await response.json();
 
         suggestionBox.innerHTML = "";
@@ -546,7 +549,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "hover:bg-gray-200",
             "cursor-pointer"
           );
-          suggestionItem.textContent = item.name;
+          suggestionItem.textContent = isTemple ? item.name : item.title;
           suggestionItem.addEventListener("click", () => {
             inputField.value = item.id;
             suggestionBox.innerHTML = "";
