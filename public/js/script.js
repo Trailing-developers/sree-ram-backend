@@ -399,6 +399,12 @@ document.addEventListener("DOMContentLoaded", function () {
         newInput1.classList.add("input", "border", "p-2");
         newInput1.autocomplete = "off";
 
+        const tabInput = document.createElement("input");
+        tabInput.type = "text";
+        tabInput.name = "tab[]";
+        tabInput.classList.add("input", "border", "p-2");
+        tabInput.autocomplete = "off";
+
         const newInput = document.createElement("input");
         newInput.type = "text";
         newInput.name = "entityId[]";
@@ -432,6 +438,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         newInputDiv.appendChild(newInput1);
+        newInputDiv.appendChild(tabInput);
         newInputDiv.appendChild(newInput);
         newInputDiv.appendChild(suggestionBox);
         newInputDiv.appendChild(newInputMedia);
