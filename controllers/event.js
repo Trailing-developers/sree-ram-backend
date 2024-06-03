@@ -1,4 +1,8 @@
-const { addEvent, getEventById } = require("../repository/event");
+const {
+  addEvent,
+  getEventById,
+  getAllEventsBetweenDates,
+} = require("../repository/event");
 
 const createEvent = (req, res) => {
   const items = req.body;
@@ -19,6 +23,16 @@ const createEvent = (req, res) => {
     });
 };
 
+const getEventsBwDays = (req, res) => {
+  const { start, end } = req.params;
+  getAllEventsBetweenDates(start, end).then((event) => {
+    res.json({
+      status: "success",
+      data: event,
+    });
+  });
+};
+
 const getEventsById = (req, res) => {
   const { eventId } = req.params;
   getEventById(eventId).then((event) => {
@@ -32,4 +46,5 @@ const getEventsById = (req, res) => {
 module.exports = {
   createEvent,
   getEventsById,
+  getEventsBwDays,
 };
