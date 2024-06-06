@@ -14,6 +14,8 @@ const getAllEventsBetweenDates = async (start, end) => {
           address1: true,
           city: true,
           state: true,
+          latitude: true,
+          longitude: true,
         },
       },
     },
