@@ -8,6 +8,15 @@ const getAllEventsBetweenDates = async (start, end) => {
         { end: { gte: new Date(end) } },
       ],
     },
+    include: {
+      location: {
+        select: {
+          address1: true,
+          city: true,
+          state: true,
+        },
+      },
+    },
   });
   return events;
 };
