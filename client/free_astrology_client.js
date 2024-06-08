@@ -2,9 +2,9 @@ const axios = require("axios");
 const { getCachedItem, cacheResponse } = require("./external_client_cache");
 
 class FreeAstrologyClient {
-  constructor() {
-    this.apiKey = "kSEykULbdl9JpAfq91o54VI6AJ5iS286kgzKc0E2";
-    this.baseUrl = "https://json.freeastrologyapi.com/";
+  constructor(apiKey, baseUrl) {
+    this.apiKey = apiKey;
+    this.baseUrl = baseUrl;
   }
 
   getHeaders() {

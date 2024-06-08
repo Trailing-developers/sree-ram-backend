@@ -1,6 +1,8 @@
 const FreeAstrologyClient = require("./../client/free_astrology_client");
 
-const client = new FreeAstrologyClient();
+const API_KEY = "kSEykULbdl9JpAfq91o54VI6AJ5iS286kgzKc0E2";
+const BASE_URL = "https://json.freeastrologyapi.com/";
+const client = new FreeAstrologyClient(API_KEY, BASE_URL);
 
 const getTithi = async (body) => {
   const st = new Date(body);
