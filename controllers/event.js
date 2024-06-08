@@ -1,3 +1,5 @@
+const { event } = require("../prisma/client");
+const { getTithi, getNakshatra } = require("../repository/calendar_event");
 const {
   addEvent,
   getEventById,
@@ -6,7 +8,6 @@ const {
 
 const createEvent = (req, res) => {
   const items = req.body;
-  console.log(JSON.stringify(items));
   addEvent(items)
     .then((event) => {
       res.json({
@@ -23,13 +24,20 @@ const createEvent = (req, res) => {
     });
 };
 
-const getEventsBwDays = (req, res) => {
+const getEventsBwDays = async (req, res) => {
   const { start, end } = req.params;
-  getAllEventsBetweenDates(start, end).then((event) => {
-    res.json({
-      status: "success",
-      data: event,
-    });
+
+  const events = await getAllEventsBetweenDates(start, end);
+  const nakshatra = await getNakshatra(start);
+  const tithi = await getTithi(start);
+
+  res.json({
+    status: "success",
+    data: {
+      events: events,
+      tithi: tithi,
+      nakshatra: nakshatra,
+    },
   });
 };
 
