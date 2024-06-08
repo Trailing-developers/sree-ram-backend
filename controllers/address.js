@@ -3,6 +3,7 @@ const {
   getAddressById,
   searchAddress,
 } = require("../repository/address");
+const { getAddressFromPincode } = require("../repository/pincode");
 
 const createAddress = (req, res) => {
   const items = req.body;
@@ -51,8 +52,23 @@ const addressSuggestion = (req, res) => {
     });
 };
 
+const addressSuggestionFromPincode = async (req, res) => {
+  const { country, pincode } = req.params;
+  if (country.toLowerCase() !== "india") {
+    res.json({ data: [] });
+  }
+  getAddressFromPincode(pincode)
+    .then((data) => {
+      res.json({ data: data });
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+};
+
 module.exports = {
   createAddress,
   addressById,
   addressSuggestion,
+  addressSuggestionFromPincode,
 };
