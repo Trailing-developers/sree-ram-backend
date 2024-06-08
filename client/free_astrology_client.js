@@ -8,6 +8,11 @@ class FreeAstrologyClient {
   }
 
   getHeaders() {
+    if (this.apiKey == null) {
+      return {
+        "Content-Type": "application/json",
+      };
+    }
     return {
       "Content-Type": "application/json",
       "x-api-key": this.apiKey,
