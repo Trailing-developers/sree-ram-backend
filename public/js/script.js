@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const suggestionBox = inputField.nextElementSibling;
                 suggestionTempleHandler(inputField, suggestionBox);
               });
+          } else if (type === "address") {
+            addAddressDynamicItemHandler();
           } else {
             addDynamicItemHandler();
           }
@@ -492,6 +494,51 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
+  //Implement this one
+  function addAddressDynamicItemHandler() {
+    const country = document.getElementById("country");
+    const zipCode = document.getElementById("zip");
+    const suggestionsList = document.getElementById("zipSuggestions");
+
+    const address2 = document.getElementById("address2");
+    const district = document.getElementById("district");
+    const city = document.getElementById("city");
+    const state = document.getElementById("state");
+
+    // const lat = document.getElementById("lat");
+    // const lon = document.getElementById("lon");
+    if (zipCode && suggestionsList) {
+      zipCode.addEventListener("input", async () => {
+        const zipcodeValue = zipCode.value;
+        const countryValue = country.value;
+
+        if (countryValue !== "india" || zipcodeValue.length < 6) {
+          suggestionsList.innerHTML = "";
+          return;
+        }
+        const response = await fetch(
+          `/api/address/country/${countryValue}/pincode/${zipcodeValue}`
+        );
+        const results = await response.json();
+        console.log(results);
+        suggestionsList.innerHTML = "";
+        results.data.forEach((result) => {
+          const li = document.createElement("li");
+          li.textContent = `${result.Name}, ${result.Block}, ${result.District}, ${result.State}`;
+          li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-200");
+          li.addEventListener("click", () => {
+            address2.value = result.Name;
+            district.value = result.District;
+            state.value = result.State;
+            suggestionsList.innerHTML = "";
+          });
+          suggestionsList.appendChild(li);
+        });
+      });
+    }
+  }
+  //finish implementation
 
   function suggestionHandler(inputField, suggestionBox) {
     if (inputField && suggestionBox) {

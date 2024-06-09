@@ -83,7 +83,6 @@
           id="isCityCenter"
           name="isCityCenter"
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          required
         />
       </div>
 
@@ -126,17 +125,22 @@
         />
       </div>
 
-      <div>
+      <div class="mb-4">
         <label for="country" class="block text-sm font-medium text-gray-700"
           >Country:</label
         >
-        <input
+        <!-- <input
           type="text"
           id="country"
           name="country"
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           required
-        />
+        /> -->
+        <select name="country" id="country" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+          <% [{value: "india", label: "India"}].forEach(function(option) { %>
+            <option value="<%= option.value %>"><%= option.label %></option>
+          <% }); %>
+        </select>
       </div>
 
       <div>
@@ -176,6 +180,7 @@
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           required
         />
+        <ul id="zipSuggestions" class="border rounded mt-2 bg-white"></ul>
       </div>
 
     <button
