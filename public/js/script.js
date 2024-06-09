@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
               });
           } else if (type === "events") {
             suggestAddressHandler();
+          } else if (type === "songs") {
+            addSongsItemHandler();
           } else if (type === "katha") {
             addGodHandler();
             document
@@ -321,6 +323,86 @@ document.addEventListener("DOMContentLoaded", function () {
     suggestAddressHandler();
   }
 
+  function addSongsItemHandler() {
+    const addItemButton = document.getElementById("addItemButton");
+    const itemContainer = document.getElementById("itemContainer");
+
+    if (addItemButton && itemContainer) {
+      addItemButton.addEventListener("click", function () {
+        const newItemInput = `
+          <div class="flex items-center space-x-2">
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700"
+          >Name:</label
+        >
+        <input
+          type="text"
+          id="title"
+          name="title[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="url" class="block text-sm font-medium text-gray-700"
+          >url:</label
+        >
+        <input
+          type="text"
+          id="url"
+          name="url[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="artist" class="block text-sm font-medium text-gray-700"
+          >Artist:</label
+        >
+        <input
+          type="text"
+          id="artist"
+          name="artist[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+      <div>
+        <label for="artworkt" class="block text-sm font-medium text-gray-700"
+          >Image:</label
+        >
+        <input
+          type="text"
+          id="artwork"
+          name="artwork[]"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+      </div>
+
+      <button
+        type="button"
+        class="delete-button bg-red-500 text-white px-2 py-1 rounded"
+      >
+        Delete
+      </button>
+    </div>
+        `;
+
+        // Append the new input field to the container
+        itemContainer.insertAdjacentHTML("beforeend", newItemInput);
+      });
+
+      itemContainer.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete-button")) {
+          e.target.parentElement.remove();
+        }
+      });
+    }
+  }
+
   function addGodHandler() {
     const addGodButton = document.getElementById("add-gods-button");
     const godsContainer = document.getElementById("godContainer");
@@ -506,8 +588,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const city = document.getElementById("city");
     const state = document.getElementById("state");
 
-    // const lat = document.getElementById("lat");
-    // const lon = document.getElementById("lon");
     if (zipCode && suggestionsList) {
       zipCode.addEventListener("input", async () => {
         const zipcodeValue = zipCode.value;

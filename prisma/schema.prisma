@@ -72,6 +72,23 @@ model Media {
   createdAt DateTime @default(now())
 }
 
+model Tracks {
+  id    Int     @id @default(autoincrement())
+  name  String  @unique
+  image String
+  songs Songs[]
+}
+
+model Songs {
+  id      Int     @id @default(autoincrement())
+  title   String  @unique
+  url     String
+  artist  String
+  artwork String
+  trackId Int?
+  track   Tracks? @relation(fields: [trackId], references: [id])
+}
+
 model Temple {
   id             Int                @id @default(autoincrement())
   name           String

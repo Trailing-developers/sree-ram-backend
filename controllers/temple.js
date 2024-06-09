@@ -6,18 +6,6 @@ const {
   findTempleMedia,
 } = require("../repository/temple");
 
-/*
-      { timing: 8, label: "8 AM", color: "#FFB800" },
-      { timing: 15, label: "", color: "#FF9900" },
-      { timing: 20, label: "", color: "#FF730D" },
-      { timing: 15, label: "12 PM", color: "#FF730D" },
-      { timing: 5, label: "", color: "#25FF20" },
-      { timing: 15, label: "", color: "#FF730D" },
-      { timing: 25, label: "3 PM", color: "#FA1111" },
-      { timing: 15, label: "", color: "#FF8C00" },
-      { timing: 15, label: "5 PM", color: "#FF8C00" },
-      { timing: 0, label: "", color: "#DF5353" },
-*/
 const colors = new Map();
 colors.set("VERYHIGH", "#FF730D");
 colors.set("HIGH", "#FF9900");

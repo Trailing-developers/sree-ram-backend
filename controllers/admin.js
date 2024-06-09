@@ -26,6 +26,8 @@ const createOption = (req, res) => {
     "events",
     "media_temple",
     "media_katha",
+    "songtracks",
+    "songs",
   ];
   res.render("create", { types });
 };
