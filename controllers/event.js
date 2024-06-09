@@ -1,5 +1,5 @@
 const { event } = require("../prisma/client");
-const { getTithi, getNakshatra, getGoodBadTimes, getYogaTimings, getLunarMonthInfo, getRitu, getVedicDay } = require("../repository/calendar_event");
+const { getGoodBadTimes, getPanchang } = require("../repository/calendar_event");
 const {
   addEvent,
   getEventById,
@@ -28,26 +28,17 @@ const getEventsBwDays = async (req, res) => {
   const { start, end } = req.params;
 
   const events = await getAllEventsBetweenDates(start, end);
-  const nakshatra = await getNakshatra(start);
-  const tithi = await getTithi(start);
+  const panchang = await getPanchang(start);
   const goodbadtimes = await getGoodBadTimes(start);
-  const yogatimes = await getYogaTimings(start);
-  const lunarinfo = await getLunarMonthInfo(start);
-  const ritu = await getRitu(start);
-  const vedic = await getVedicDay(start);
+  
 
 
   res.json({
     status: "success",
     data: {
       events: events,
-      tithi: tithi,
-      nakshatra: nakshatra,
-      goodbadtimes: goodbadtimes,
-      yogatimes: yogatimes,
-      lunarinfo: lunarinfo,
-      ritu: ritu,
-      vedic: vedic
+      panchang: panchang,
+      goodbadtimes: goodbadtimes
     },
   });
 };

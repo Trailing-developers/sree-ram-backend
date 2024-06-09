@@ -4,9 +4,9 @@ const API_KEY = "kSEykULbdl9JpAfq91o54VI6AJ5iS286kgzKc0E2";
 const BASE_URL = "https://json.freeastrologyapi.com/";
 const client = new FreeAstrologyClient(API_KEY, BASE_URL);
 
-const getTithi = async (body) => {
+const getPanchang = async (body) => {
   const st = new Date(body);
-  const key = `tithi-durations-${st.getDate()}-${
+  const key = `complete-panchang-${st.getDate()}-${
     st.getMonth() + 1
   }-${st.getYear()}`;
   const bb = JSON.stringify({
@@ -25,42 +25,14 @@ const getTithi = async (body) => {
     },
   });
   try {
-    const response = await client.post("tithi-durations", bb, key);
-    return JSON.parse(response.output);
+    const response = await client.post("complete-panchang", bb, key);
+    return response.output;
   } catch (e) {
     console.log(e);
     return null;
   }
 };
 
-const getNakshatra = async (body) => {
-  const st = new Date(body);
-  const key = `nakshatra-durations-${st.getDate()}-${
-    st.getMonth() + 1
-  }-${st.getYear()}`;
-  const bb = JSON.stringify({
-    year: st.getFullYear(),
-    month: st.getMonth() + 1,
-    date: st.getDate(),
-    hours: st.getHours(),
-    minutes: st.getMinutes(),
-    seconds: st.getSeconds(),
-    latitude: 23.1765,
-    longitude: 75.7885,
-    timezone: 5.5,
-    config: {
-      observation_point: "topocentric",
-      ayanamsha: "lahiri",
-    },
-  });
-  try {
-    const response = await client.post("nakshatra-durations", bb, key);
-    return JSON.parse(response.output);
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-};
 
 const getGoodBadTimes = async (body) => {
   const st = new Date(body);
@@ -92,133 +64,8 @@ const getGoodBadTimes = async (body) => {
   }
 };
 
-const getYogaTimings = async (body) => {
-  const st = new Date(body);
-  const key = `yoga-durations-${st.getDate()}-${
-    st.getMonth() + 1
-  }-${st.getYear()}`;
-  const bb = JSON.stringify({
-    year: st.getFullYear(),
-    month: st.getMonth() + 1,
-    date: st.getDate(),
-    hours: st.getHours(),
-    minutes: st.getMinutes(),
-    seconds: st.getSeconds(),
-    latitude: 23.1765,
-    longitude: 75.7885,
-    timezone: 5.5,
-    config: {
-      observation_point: "topocentric",
-      ayanamsha: "lahiri",
-    },
-  });
-  try {
-    const response = await client.post("yoga-durations", bb, key);
-
-    return JSON.parse(response.output);
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-};
-
-
-const getLunarMonthInfo = async (body) => {
-  const st = new Date(body);
-  const key = `lunarmonthinfo-${st.getDate()}-${
-    st.getMonth() + 1
-  }-${st.getYear()}`;
-  const bb = JSON.stringify({
-    year: st.getFullYear(),
-    month: st.getMonth() + 1,
-    date: st.getDate(),
-    hours: st.getHours(),
-    minutes: st.getMinutes(),
-    seconds: st.getSeconds(),
-    latitude: 23.1765,
-    longitude: 75.7885,
-    timezone: 5.5,
-    config: {
-      observation_point: "topocentric",
-      ayanamsha: "lahiri",
-    },
-  });
-  try {
-    const response = await client.post("lunarmonthinfo", bb, key);
-
-    return JSON.parse(response.output);
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-};
-
-const getRitu = async (body) => {
-  const st = new Date(body);
-  const key = `rituinfo-${st.getDate()}-${
-    st.getMonth() + 1
-  }-${st.getYear()}`;
-  const bb = JSON.stringify({
-    year: st.getFullYear(),
-    month: st.getMonth() + 1,
-    date: st.getDate(),
-    hours: st.getHours(),
-    minutes: st.getMinutes(),
-    seconds: st.getSeconds(),
-    latitude: 23.1765,
-    longitude: 75.7885,
-    timezone: 5.5,
-    config: {
-      observation_point: "topocentric",
-      ayanamsha: "lahiri",
-    },
-  });
-  try {
-    const response = await client.post("rituinfo", bb, key);
-
-    return JSON.parse(response.output);
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-};
-
-
-const getVedicDay = async (body) => {
-  const st = new Date(body);
-  const key = `vedicweekday-${st.getDate()}-${
-    st.getMonth() + 1
-  }-${st.getYear()}`;
-  const bb = JSON.stringify({
-    year: st.getFullYear(),
-    month: st.getMonth() + 1,
-    date: st.getDate(),
-    hours: st.getHours(),
-    minutes: st.getMinutes(),
-    seconds: st.getSeconds(),
-    latitude: 23.1765,
-    longitude: 75.7885,
-    timezone: 5.5,
-    config: {
-      observation_point: "topocentric",
-      ayanamsha: "lahiri",
-    },
-  });
-  try {
-    const response = await client.post("vedicweekday", bb, key);
-    return response.output;
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-};
 
 module.exports = {
-  getTithi,
-  getNakshatra,
-  getGoodBadTimes,
-  getYogaTimings,
-  getLunarMonthInfo,
-  getRitu,
-  getVedicDay
+  getPanchang,
+  getGoodBadTimes
 };
