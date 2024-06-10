@@ -77,6 +77,7 @@ model Tracks {
   name  String  @unique
   image String
   songs Songs[]
+  katha Katha[]
 }
 
 model Songs {
@@ -137,6 +138,8 @@ model Katha {
   type      String
   gods      GodKathaMapping[]
   medias    Media[]
+  trackId   Int?
+  tracks    Tracks?           @relation(fields: [trackId], references: [id])
   content   Json              @default("[]")
   createdAt DateTime          @default(now())
 }
