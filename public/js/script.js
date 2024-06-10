@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
               });
           } else if (type === "address") {
             addAddressDynamicItemHandler();
+          } else if (type === "songtracks") {
+            addTrackDynamicItemHandler();
+            document
+              .querySelectorAll(".suggestion-input")
+              .forEach((inputField) => {
+                const suggestionBox = inputField.nextElementSibling;
+                suggestSongHandler(inputField, suggestionBox);
+              });
           } else {
             addDynamicItemHandler();
           }
@@ -321,6 +329,93 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addGodHandler();
     suggestAddressHandler();
+  }
+
+  function addTrackDynamicItemHandler() {
+    const addItemButton = document.getElementById("addCardItem");
+    const itemContainer = document.getElementById("songContainer");
+
+    if (addItemButton && itemContainer) {
+      addItemButton.addEventListener("click", function () {
+        const newInputDiv = document.createElement("div");
+        newInputDiv.classList.add("relative", "mb-4");
+
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.name = "song[]";
+        newInput.id = "song";
+        newInput.classList.add("suggestion-input", "input", "border", "p-2");
+        newInput.autocomplete = "off";
+
+        const suggestionBox = document.createElement("ul");
+        suggestionBox.id = "songSuggestions";
+
+        suggestionBox.classList.add(
+          "absolute",
+          "bg-white",
+          "border",
+          "border-gray-300",
+          "w-full",
+          "mt-1"
+        );
+
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add(
+          "bg-red-500",
+          "text-white",
+          "delete-gods-button",
+          "px-2",
+          "py-1",
+          "rounded",
+          "ml-2"
+        );
+        deleteButton.addEventListener("click", () => {
+          newInputDiv.remove();
+        });
+
+        newInputDiv.appendChild(newInput);
+        newInputDiv.appendChild(suggestionBox);
+        newInputDiv.appendChild(deleteButton);
+
+        itemContainer.appendChild(newInputDiv);
+        suggestSongHandler(newInput, suggestionBox);
+      });
+    }
+  }
+
+  function suggestSongHandler(songInput, suggestionsList) {
+    // const songInput = document.getElementById("song");
+    // const suggestionsList = document.getElementById("songSuggestions");
+
+    console.log("yes");
+    if (songInput && suggestionsList) {
+      songInput.addEventListener("input", async () => {
+        const songInputValue = songInput.value;
+
+        if (songInputValue.length < 1) {
+          suggestionsList.innerHTML = "";
+          return;
+        }
+        const response = await fetch(
+          `/api/songs/suggestion?q=${songInputValue}`
+        );
+        const results = await response.json();
+        console.log(results);
+        suggestionsList.innerHTML = "";
+        results.data.forEach((result) => {
+          const li = document.createElement("li");
+          li.textContent = `${result.title}, ${result.artist}`;
+          li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-200");
+          li.addEventListener("click", () => {
+            songInput.value = result.id;
+            suggestionsList.innerHTML = "";
+          });
+          suggestionsList.appendChild(li);
+        });
+      });
+    }
   }
 
   function addSongsItemHandler() {

@@ -1,13 +1,13 @@
 <h2 class="text-xl font-semibold mb-2">Add Tracks</h2>
 <form action="/api/track" method="POST" class="space-y-4">
   <div>
-    <label for="title" class="block text-sm font-medium text-gray-700"
-      >Title:</label
+    <label for="name" class="block text-sm font-medium text-gray-700"
+      >Name:</label
     >
     <input
       type="text"
-      id="title"
-      name="title"
+      id="name"
+      name="name"
       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
       required
     />
@@ -25,16 +25,27 @@
     />
   </div>
   <div>
-    <label for="content" class="block text-sm font-medium text-gray-700"
-      >Content:</label
+    Add Songs to Track list
+    <div id="songContainer">
+      <div>
+        <input
+          type="text"
+          id="song"
+          placeholder="Type song which will be replaced by Song Id"
+          name="song[]"
+          class="suggestion-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          required
+        />
+        <ul id="songSuggestions" class="border rounded mt-2 bg-white"></ul>
+      </div>
+    </div>
+    <button
+      type="button"
+      id="addCardItem"
+      class="add-button bg-blue-600 text-white px-2 py-1 rounded"
     >
-    <input
-      type="content"
-      id="content"
-      name="content"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-      required
-    />
+      Add Song
+    </button>
   </div>
   <button
     type="submit"
@@ -42,5 +53,4 @@
   >
     Submit
   </button>
-  </form>
 </form>
