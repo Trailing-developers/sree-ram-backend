@@ -1,0 +1,23 @@
+const { getNearbyTempleFromRepo } = require("../repository/nearbysearch");
+
+const getNearbyTemples = (req, res) => {
+  const { lat, lng } = req.query;
+  getNearbyTempleFromRepo(lat, lng)
+    .then((data) => {
+      res.json({ success: true, data: data });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json({ success: false, message: err });
+    });
+};
+
+const getNearbyHotels = (req, res) => {
+  const { lat, lng } = req.query;
+  res.json({ lat, lng });
+};
+
+module.exports = {
+  getNearbyHotels,
+  getNearbyTemples,
+};

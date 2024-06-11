@@ -15,6 +15,7 @@ const godRouter = require("./routes/gods");
 const address = require("./routes/address");
 const eventRouter = require("./routes/event");
 const trackRouter = require("./routes/tracks");
+const nearbySearchRouter = require("./routes/nearbysearch");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -48,6 +49,7 @@ app.use("/api", [
   address,
   eventRouter,
   trackRouter,
+  nearbySearchRouter,
 ]);
 
 app.listen(PORT, () => {

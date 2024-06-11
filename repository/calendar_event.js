@@ -1,8 +1,9 @@
 const FreeAstrologyClient = require("./../client/free_astrology_client");
+require("dotenv").config();
 
-const API_KEY = "kSEykULbdl9JpAfq91o54VI6AJ5iS286kgzKc0E2";
+const API_KEY = process.env.FREE_ASTROTROLOGY_API;
 const BASE_URL = "https://json.freeastrologyapi.com/";
-const client = new FreeAstrologyClient(API_KEY, BASE_URL);
+const client = new FreeAstrologyClient(API_KEY, BASE_URL, null);
 
 const getTithi = async (body) => {
   const st = new Date(body);
@@ -85,7 +86,16 @@ const getGoodBadTimes = async (body) => {
   try {
     const response = await client.post("good-bad-times", bb, key);
 
-    return {abhijit_data: JSON.parse(response.abhijit_data), amrit_kaal_data: JSON.parse(response.amrit_kaal_data), brahma_muhurat_data: JSON.parse(response.brahma_muhurat_data), rahu_kaalam_data: JSON.parse(response.rahu_kaalam_data), yama_gandam_data: JSON.parse(response.yama_gandam_data), gulika_kalam_data: JSON.parse(response.gulika_kalam_data), dur_muhurat_data: JSON.parse(response.dur_muhurat_data), varjyam_data: JSON.parse(response.varjyam_data) };
+    return {
+      abhijit_data: JSON.parse(response.abhijit_data),
+      amrit_kaal_data: JSON.parse(response.amrit_kaal_data),
+      brahma_muhurat_data: JSON.parse(response.brahma_muhurat_data),
+      rahu_kaalam_data: JSON.parse(response.rahu_kaalam_data),
+      yama_gandam_data: JSON.parse(response.yama_gandam_data),
+      gulika_kalam_data: JSON.parse(response.gulika_kalam_data),
+      dur_muhurat_data: JSON.parse(response.dur_muhurat_data),
+      varjyam_data: JSON.parse(response.varjyam_data),
+    };
   } catch (e) {
     console.log(e);
     return null;
@@ -122,7 +132,6 @@ const getYogaTimings = async (body) => {
   }
 };
 
-
 const getLunarMonthInfo = async (body) => {
   const st = new Date(body);
   const key = `lunarmonthinfo-${st.getDate()}-${
@@ -155,9 +164,7 @@ const getLunarMonthInfo = async (body) => {
 
 const getRitu = async (body) => {
   const st = new Date(body);
-  const key = `rituinfo-${st.getDate()}-${
-    st.getMonth() + 1
-  }-${st.getYear()}`;
+  const key = `rituinfo-${st.getDate()}-${st.getMonth() + 1}-${st.getYear()}`;
   const bb = JSON.stringify({
     year: st.getFullYear(),
     month: st.getMonth() + 1,
@@ -182,7 +189,6 @@ const getRitu = async (body) => {
     return null;
   }
 };
-
 
 const getVedicDay = async (body) => {
   const st = new Date(body);
@@ -220,5 +226,5 @@ module.exports = {
   getYogaTimings,
   getLunarMonthInfo,
   getRitu,
-  getVedicDay
+  getVedicDay,
 };
