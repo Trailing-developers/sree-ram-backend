@@ -21,6 +21,13 @@ const getNearbyTempleFromRepo = async (lat, lng) => {
 const getNearbyHotelsFromRepo = async (lat, lng) => {
   const uri = `search-nearby?query=hotels+&+restaurants&lat=${lat}&lng=${lng}&limit=${limit}&language=${language}&region=${region}`;
   const response = await client.get(uri, uri);
+  response.data = response.data.slice(0, 5).map((result) => ({
+    name: result.name,
+    type: result.type,
+    address: result.address,
+    rating: result.rating,
+    image: result.photos_sample[0].photo_url_large,
+  }));
   return response;
 };
 

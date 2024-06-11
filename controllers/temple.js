@@ -1,3 +1,4 @@
+const { getNearbyHotelsFromRepo } = require("../repository/nearbysearch");
 const {
   addTemple,
   getTempleById,
@@ -45,12 +46,15 @@ const createTemple = (req, res) => {
     });
 };
 
-const getTemple = (req, res) => {
+const getTemple = async (req, res) => {
   const { templeId } = req.params;
-  getTempleById(templeId).then((temple) => {
+  getTempleById(templeId).then(async (temple) => {
     const crowdObj = getCrowdInfo(temple);
-    console.log(crowdObj);
     temple.crowded = crowdObj;
+    temple.hotels = await getNearbyHotelsFromRepo(
+      temple.latitude,
+      temple.longitude
+    );
     res.json({
       status: "success",
       data: temple,
