@@ -1,10 +1,19 @@
 const { event } = require("../prisma/client");
-const { getTithi, getNakshatra, getGoodBadTimes, getYogaTimings, getLunarMonthInfo, getRitu, getVedicDay } = require("../repository/calendar_event");
+const {
+  getTithi,
+  getNakshatra,
+  getGoodBadTimes,
+  getYogaTimings,
+  getLunarMonthInfo,
+  getRitu,
+  getVedicDay,
+} = require("../repository/calendar_event");
 const {
   addEvent,
   getEventById,
   getAllEventsBetweenDates,
 } = require("../repository/event");
+const { getSunMoonRise } = require("../repository/sunmoonrise");
 
 const createEvent = (req, res) => {
   const items = req.body;
@@ -36,6 +45,7 @@ const getEventsBwDays = async (req, res) => {
   const ritu = await getRitu(start);
   const vedic = await getVedicDay(start);
 
+  const surmoonrise = await getSunMoonRise("india", start);
 
   res.json({
     status: "success",
@@ -47,7 +57,8 @@ const getEventsBwDays = async (req, res) => {
       yogatimes: yogatimes,
       lunarinfo: lunarinfo,
       ritu: ritu,
-      vedic: vedic
+      vedic: vedic,
+      sun_moon_rise: surmoonrise,
     },
   });
 };
