@@ -6,6 +6,9 @@ const path = require("path");
 // admin route
 const indexRouter = require("./routes/index");
 
+// middleware - app
+const { clientIpMiddleware } = require("./middleware/clientIp");
+
 // exposed - app
 const kathaRouter = require("./routes/katha_api");
 const mantraRouter = require("./routes/mantras");
@@ -24,9 +27,13 @@ const PORT = process.env.PORT || 3000;
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+//get trusted proxy
+app.set("trust proxy", true);
+
 // Middleware
 app.use(morgan("dev"));
 app.use(cors());
+app.use(clientIpMiddleware);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
