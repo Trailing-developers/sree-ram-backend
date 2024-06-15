@@ -5,11 +5,11 @@ const API_KEY = process.env.FREE_ASTROTROLOGY_API;
 const BASE_URL = "https://json.freeastrologyapi.com/";
 const client = new FreeAstrologyClient(API_KEY, BASE_URL, null);
 
-const getTithi = async (body) => {
+const getTithi = async (body, timezoneOffset) => {
   const st = new Date(body);
   const key = `tithi-durations-${st.getDate()}-${
     st.getMonth() + 1
-  }-${st.getYear()}`;
+  }-${st.getYear()}-${timezoneOffset}`;
   const bb = JSON.stringify({
     year: st.getFullYear(),
     month: st.getMonth() + 1,
@@ -19,7 +19,7 @@ const getTithi = async (body) => {
     seconds: st.getSeconds(),
     latitude: 23.1765,
     longitude: 75.7885,
-    timezone: 5.5,
+    timezone: parseInt(timezoneOffset) ?? 5.5,
     config: {
       observation_point: "topocentric",
       ayanamsha: "lahiri",
@@ -182,8 +182,7 @@ const getRitu = async (body) => {
   });
   try {
     const response = await client.post("rituinfo", bb, key);
-
-    return JSON.parse(response.output);
+    return response.output;
   } catch (e) {
     console.log(e);
     return null;

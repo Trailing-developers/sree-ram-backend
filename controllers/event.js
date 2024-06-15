@@ -35,17 +35,26 @@ const createEvent = (req, res) => {
 
 const getEventsBwDays = async (req, res) => {
   const { start, end } = req.params;
+  const address = req.address;
+  const timezoneOffset = req.headers["timezone-offset"] ?? 5.5;
 
   const events = await getAllEventsBetweenDates(start, end);
   const nakshatra = await getNakshatra(start);
-  const tithi = await getTithi(start);
+  const tithi = await getTithi(start, timezoneOffset);
   const goodbadtimes = await getGoodBadTimes(start);
   const yogatimes = await getYogaTimings(start);
   const lunarinfo = await getLunarMonthInfo(start);
   const ritu = await getRitu(start);
   const vedic = await getVedicDay(start);
 
-  const surmoonrise = await getSunMoonRise("india", start);
+  const surmoonrise = await getSunMoonRise(
+    encodeURIComponent(
+      `${address?.area?.name ?? "new delhi"} ${
+        address?.city?.name ?? "delhi"
+      } ${address?.country?.capital ?? "india"}`
+    ),
+    start
+  );
 
   res.json({
     status: "success",
