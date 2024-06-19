@@ -16,7 +16,7 @@ const language = "en";
 const getNearbyTempleFromRepo = async (lat, lng) => {
   const uri = `search-nearby?query=temples&lat=${lat}&lng=${lng}&limit=${limit}&language=${language}&region=${region}`;
   const response = await client.get(uri, uri);
-  responseToTempleMapper(reponse);
+  // responseToTempleMapper(reponse);
   return response;
 };
 

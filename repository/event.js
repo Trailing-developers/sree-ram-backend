@@ -4,8 +4,8 @@ const getAllEventsBetweenDates = async (start, end) => {
   const events = await prisma.event.findMany({
     where: {
       AND: [
-        { start: { lte: new Date(start) } },
-        { end: { gte: new Date(end) } },
+        { start: { gte: new Date(start) } },
+        { end: { lte: new Date(end) } },
       ],
     },
     include: {
@@ -33,8 +33,8 @@ const getEventById = async (id) => {
 };
 
 const addEvent = async (body) => {
-  body.start = new Date(body.end).toISOString();
-  body.end = new Date(body.start).toISOString();
+  body.start = new Date(body.start).toISOString();
+  body.end = new Date(body.end).toISOString();
   const event = await prisma.event.create({
     data: {
       name: body.name,
@@ -48,7 +48,6 @@ const addEvent = async (body) => {
           id: parseInt(body.location),
         },
       },
-      end: body.end,
     },
   });
   return event;
