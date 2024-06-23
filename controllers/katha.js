@@ -5,11 +5,23 @@ const {
   getKathaById,
   getKathaSuggestions,
   findKathaMedia,
+  getAllKathasByType,
 } = require("../repository/katha");
 const { addMedia } = require("../repository/temple");
 const getKathaList = (req, res) => {
   const { type } = req.params;
-  getAllKathas(type)
+  getAllKathasByType(type)
+    .then((katha) => {
+      res.json(katha);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ message: err.message });
+    });
+};
+
+const getAllKathaList = (req, res) => {
+  getAllKathasByType()
     .then((katha) => {
       res.json(katha);
     })
@@ -94,6 +106,7 @@ const createKatha = (req, res) => {
 
 module.exports = {
   getKathaList,
+  getAllKathaList,
   createKatha,
   addKathaMedia,
   getKathaPage,

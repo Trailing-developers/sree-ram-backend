@@ -1,10 +1,22 @@
 const prisma = require("../prisma/client");
 
-const getAllKathas = async (type) => {
+const getAllKathasByType = async (type) => {
   const kathaList = await prisma.katha.findMany({
     where: {
       type: type,
     },
+    select: {
+      title: true,
+      image: true,
+      type: true,
+      id: true,
+    },
+  });
+  return kathaList;
+};
+
+const getAllKathas = async () => {
+  const kathaList = await prisma.katha.findMany({
     select: {
       title: true,
       image: true,
@@ -80,4 +92,5 @@ module.exports = {
   findKathaMedia,
   addKatha,
   addMedia,
+  getAllKathasByType,
 };

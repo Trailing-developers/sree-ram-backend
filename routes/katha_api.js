@@ -8,10 +8,12 @@ const {
   getKathaSuggestion,
   addKathaMedia,
   findMediaByKathaId,
+  getAllKathaList,
 } = require("../controllers/katha");
 
 router
   .get("/kathas/type/:type", getKathaList)
+  .get("/kathas", getAllKathaList)
   .post("/katha/media", addKathaMedia)
   .get("/media/katha/:kathaId", findMediaByKathaId)
   .get("/katha/suggest", getKathaSuggestion)
