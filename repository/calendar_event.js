@@ -182,7 +182,7 @@ const getRitu = async (body) => {
   });
   try {
     const response = await client.post("rituinfo", bb, key);
-    return response.output;
+    return JSON.parse(response.output);
   } catch (e) {
     console.log(e);
     return null;
