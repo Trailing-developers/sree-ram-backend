@@ -118,6 +118,9 @@ const getEventsById = (req, res) => {
 
 const transformGoodBadTimes = (goodbadtimes) => {
   const goodbadtimesMap = {};
+  if (goodbadtimes == null) {
+    return {};
+  }
   Object.entries(goodbadtimes)
     .filter(([key, value]) => muhuratData[key] != null)
     .map(([key, value]) => {
